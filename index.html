@@ -5,32 +5,65 @@
   <title>SeaGrass Gallery</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-   
-    .header {
-      background-color: #00aeff;
-
+    /* Custom color theme */
+    :root {
+      --primary-color: #00aeff;
+      --secondary-color: #ffffff;
+      --text-color: #000000;
     }
 
-    /* Style for the painting cards */
-    .painting-card {
-      width: 300px;
-      margin: 10px;
-      padding: 16px;
-      text-align: center;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Global styles */
+    body {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
 
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    /* Header styles */
+    .header {
+      background-color: var(--primary-color);
+    }
+
+    /* Content section styles */
+    .content-section {
+      padding: 50px;
+    }
+
+    .content-section h2 {
+      color: var(--primary-color);
+    }
+
+    .content-section p {
+      margin-bottom: 20px;
+    }
+
+    .content-section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 30px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 16px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header, Navigation and logo -->
-  <nav>
-    <div class="w3-bar w3-xlarge w3-blue w3-mobile">
+  <!-- Header, Navigation, and logo -->
+  <nav class="header">
+    <div class="w3-bar w3-xlarge w3-mobile">
       <a href="index.html" class="w3-bar-item w3-button w3-hover-blue w3-mobile">
-        <img src="seagrass_gallery_2_Street sign.png" width="25%">
+        <img src="seagrass_gallery_2_Street sign.png" width="25%" alt="Logo">
       </a>
     </div>
     <div class="w3-bar w3-black">
@@ -41,7 +74,7 @@
   </nav>
 
   <!-- Content sections -->
-  <section>
+  <section class="content-section">
     <div class="w3-container w3-center">
       <h2>About</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget urna placerat,</p>
@@ -52,15 +85,12 @@
     <div class="w3-container w3-center">
       <h2>Location</h2>
       <p>Seagrass gallery is located at 38 Moana Street Ōtaki Beach, Ōtaki</p>
-      <img src="staticmap.png" width="700px">
+      <img src="staticmap.png" width="700px" alt="Map">
     </div>
-  </section>
-  <section>
-    
   </section>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-black">
+  <footer>
     <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
   </footer>
 
