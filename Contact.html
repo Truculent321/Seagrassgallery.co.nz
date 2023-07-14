@@ -5,10 +5,48 @@
   <title>SeaGrass Gallery</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-   
-    .header {
-      background-color: #00aeff;
+    body {
+      background-color: white;
+    }
 
+    .header {
+      background-color: #000;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #00aeff;
+    }
+
+    nav a {
+      color: #fff !important;
+    }
+
+    .w3-card-4 {
+      background-color: #f1f1f1;
+      color: #000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #00aeff;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
     }
   </style>
 </head>
@@ -16,8 +54,8 @@
 <body>
 
   <!-- Header, Navigation and logo -->
-  <nav>
-    <div class="w3-bar w3-xlarge w3-blue w3-mobile">
+  <nav class="header">
+    <div class="w3-bar w3-xlarge w3-mobile">
       <a href="index.html" class="w3-bar-item w3-button w3-hover-blue w3-mobile">
         <img src="seagrass_gallery_2_Street sogn.jpg" width="100">
       </a>
@@ -27,9 +65,9 @@
       <a href="Paintings.html" class="w3-bar-item w3-button">Paintings</a>
       <a href="Contact.html" class="w3-bar-item w3-button">Contact</a>
     </div>
- </nav>
+  </nav>
 
- <div class="w3-container w3-card-4 w3-light-grey w3-margin">
+  <div class="w3-container w3-card-4 w3-margin">
     <h1>Contact me</h1>
 
     <form action="/submit" method="POST" class="w3-container">
@@ -46,9 +84,11 @@
     </form>
   </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-16 w3-black">
-        <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
-      </footer>
-  </body>
-  </html>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16">
+    <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
