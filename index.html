@@ -18,6 +18,33 @@
       margin: auto;
     }
     /* Add any additional custom styles here */
+     .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .card-content {
+      padding: 10px 0;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .card-artist {
+      font-size: 14px;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -68,18 +95,21 @@ Grant Stevenson QSM</p>
   <!-- Recent Paintings Section -->
   <div id="recent-paintings" class="w3-container">
     <h2>Recent Paintings</h2>
-    <div class="w3-row-padding">
-      <div class="w3-col s4">
-        <img src="Dungeon_cropped.jpg" style="width:100%">
-      </div>
-      <div class="w3-col s4">
-        <img src="Sapphire Final_cropped.jpg" style="width:100%">
-      </div>
-      <div class="w3-col s4">
-        <img src="Houses_cropped.jpg" style="width:100%">
+  <div class="w3-container">
+    <div class="w3-row">
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="your_painting_image_url.jpg" alt="Painting">
+          <div class="card-content">
+            <p class="card-title">Painting Title</p>
+            <p class="card-artist">by Artist Name</p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 
   <!-- Footer -->
   <footer class="w3-container w3-blue w3-center">
