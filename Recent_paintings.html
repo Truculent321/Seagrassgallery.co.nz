@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seagrass Gallery</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Style the painting cards */
+  .painting-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 1200px;
+    /* Added maximum width to center and control card size */
+    margin: 0 auto;
+    /* Center the container */
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    max-width: 250px;
+    /* Limit the card width */
+    margin: 0 auto;
+    /* Center the cards */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .card-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .card-artist {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .card-sold {
+    color: red;
+    font-weight: bold;
+  }
+
+  /* Style the heading */
+  h2 {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  /* Add some padding to the body */
+  body {
+    padding: 20px;
+  }
+</style>
+
+<body>
+  <div id="recent-paintings" class="w3-container w3-center">
+    <h2>Recent Paintings</h2>
+
+    <!-- Updated container to wrap all painting cards -->
+    <div class="painting-container">
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/Nudescape FINAL_cropped.jpg" alt="Nudescape">
+          <div class="card-content">
+            <p class="card-title">Nudescape</p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist">FOR SALE</p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/Dungeon_cropped.jpg" alt="Dungeon">
+          <div class="card-content">
+            <p class="card-title">Dungeon</p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist"> SOLD</p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/Corrected Rose_cropped.jpg" alt="Rose">
+          <div class="card-content">
+            <p class="card-title">Rose</p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist">SOLD</p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/Sapphire Final_cropped.jpg" alt="">
+          <div class="card-content">
+            <p class="card-title">Sapphire</p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist"></p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/Letter boxes final_cropped.jpg" alt="">
+          <div class="card-content">
+            <p class="card-title">Letterboxes</p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist"></p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="painting-container">
+    <div class="w3-col m4">
+      <div class="card">
+        <img src="Images/" alt="">
+        <div class="card-content">
+          <p class="card-title"></p>
+          <p class="card-artist">by Grant Stevenson</p>
+          <p class="card-artist"></p>
+          <p>Description of the painting goes here...</p>
+        </div>
+      </div>
+    </div 
+    <div class="painting-container">
+      <div class="w3-col m4">
+        <div class="card">
+          <img src="Images/" alt="">
+          <div class="card-content">
+            <p class="card-title"></p>
+            <p class="card-artist">by Grant Stevenson</p>
+            <p class="card-artist"></p>
+            <p>Description of the painting goes here...</p>
+          </div>
+        </div>
+      </div 
+      <div class="painting-container">
+        <div class="w3-col m4">
+          <div class="card">
+            <img src="Images/" alt="">
+            <div class="card-content">
+              <p class="card-title"></p>
+              <p class="card-artist">by Grant Stevenson</p>
+              <p class="card-artist"></p>
+              <p>Description of the painting goes here...</p>
+            </div>
+          </div>
+        </div 
+        <div class="painting-container">
+          <div class="w3-col m4">
+            <div class="card">
+              <img src="Images/" alt="">
+              <div class="card-content">
+                <p class="card-title"></p>
+                <p class="card-artist">by Grant Stevenson</p>
+                <p class="card-artist"></p>
+                <p>Description of the painting goes here...</p>
+              </div>
+            </div>
+          </div 
+          <div class="painting-container">
+            <div class="w3-col m4">
+              <div class="card">
+                <img src="Images/" alt="">
+                <div class="card-content">
+                  <p class="card-title"></p>
+                  <p class="card-artist">by Grant Stevenson</p>
+                  <p class="card-artist"></p>
+                  <p>Description of the painting goes here...</p>
+                </div>
+              </div>
+            </div 
+    
+  
+  
+  
+
+  </body>
+</html>
