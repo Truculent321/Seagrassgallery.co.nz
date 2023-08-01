@@ -3,29 +3,84 @@
 
 <head>
   <title>Seagrass Gallery</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- <style>
-    /* Custom styling for specific elements */
+  <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Arial", sans-serif;
+    
+    /* Navbar */
+    nav {
+      background-color: #000;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    /* Style the logo */
-    .w3-bar-item img {
-      display: block;
-      margin: auto;
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
     }
-    /* Add any additional custom styles here */
+    
+    .logo {
+      height: 85px;
+    }
+    
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    
+    p {
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+   
+    /* New styles for the second page */
+    .w3-container {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .w3-bar {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .painting-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .w3-col {
+      flex: 0 0 calc(33.3333% - 20px);
+      margin: 10px;
+    }
+
     .card {
-      width: 300px;
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 10px;
-      margin: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .card img {
@@ -40,79 +95,49 @@
     .card-title {
       font-size: 18px;
       font-weight: bold;
+      margin: 5px 0;
     }
 
     .card-artist {
       font-size: 14px;
-      color: #666;
+      margin: 5px 0;
     }
 
-    /* New styles for painting container */
-    .painting-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    /* Modified styles for the navbar */
-    .w3-bar {
-      display: flex;
-      align-items: center; /* Center items vertically */
-    }
-
-    .w3-bar-item {
-      margin: 0 15px;
-    }
-
-    .w3-bar-item:first-child {
-      margin-left: 0;
-    }
-
-    .w3-bar-item:last-child {
-      margin-right: 0;
-    }
-
-    /* Removed the closing curly brace that caused the issue */
-    /* }
-
-    footer {
-        background-color: #000;
-        padding: 20px;
-        text-align: center;
-        font-size: 14px;
-    } */
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
-  <div class="w3-bar w3-black w3-mobile">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-black"><img class="logo" src="seagrass_gallery_2_Street sign Cropped(1).png"></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">About</a>
-    <a href="Recent_paintings.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Recent paintings</a>
-    <a href="Contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Contact</a>
-  </div>
- <div class="w3-container w3-center">
-  <h2>About the Artist</h2>
+  <nav>
+    <a href="index.html"><img class="logo" src="seagrass_gallery_2_Street sign Cropped(1).png"></a>
+    <a href="index.html">About</a>
+    <a href="Recent_paintings.html">Recent paintings</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="w3-container w3-center">
+    <h2>About the Artist</h2>
     <br>
-  <p> I think I was always supposed to be a painter.</p>
-  <p> It’s not until I retired from a busy life organizing </p>
-  <p> major public events in Wellington that I started to </p>
-  <p> take painting seriously.</p>
+    <p>I think I was always supposed to be a painter.</p>
+    <p>It's not until I retired from a busy life organizing</p>
+    <p>major public events in Wellington that I started to</p>
+    <p>take painting seriously.</p>
     <br>
-    <p>You will see two basic styles of acrylic painting in </p
-   <p> the way I work. Some paintings are rendered in a</p
-   <p> tight, geometric, exact way showing an understanding </p
-    <p>of objects and perspective, others are more</p
-   <p> loosely created and happen more quickly.</p
+    <p>You will see two basic styles of acrylic painting in</p>
+    <p>the way I work. Some paintings are rendered in a</p>
+    <p>tight, geometric, exact way showing an understanding</p>
+    <p>of objects and perspective, others are more</p>
+    <p>loosely created and happen more quickly.</p>
     <br>
     <p>I shall keep going at both, perhaps until the louder voice</p>
-    <p>drowns out the other</p>.
+    <p>drowns out the other.</p>
     <br><br>
-    Grant Stevenson QSM
- 
-</div>
-  
+    <p>Grant Stevenson QSM</p>
+
+  </div>
+
   <div id="recent-paintings" class="w3-container w3-center">
     <h2>Recent Paintings</h2>
 
@@ -130,53 +155,16 @@
         </div>
       </div>
 
-      <div class="w3-col m4">
-        <div class="card">
-          <img src="Dungeon_cropped.jpg" alt="Dungeon">
-          <div class="card-content">
-            <p class="card-title">Dungeon</p>
-            <p class="card-artist">by Grant Stevenson</p>
-            <p class="card-artist"> SOLD</p>
-            <p>Description of the painting goes here...</p>
-          </div>
-        </div>
-      </div>
+      <!-- Add more painting cards here (copy and modify the above code) -->
 
-      <div class="w3-col m4">
-        <div class="card">
-          <img src="Corrected Rose_cropped.jpg" alt="Rose">
-          <div class="card-content">
-            <p class="card-title">Rose</p>
-            <p class="card-artist">by Grant Stevenson</p>
-            <p class="card-artist">SOLD</p>
-            <p>Description of the painting goes here...</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-col m4">
-        <div class="card">
-          <img src="Sapphire Final_cropped.jpg" alt="Sapphire">
-          <div class="card-content">
-            <p class="card-title">Sapphire</p>
-            <p class="card-artist">by Grant Stevenson</p>
-            <p class="card-artist"></p>
-            <p>Description of the painting goes here...</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-col m4">
-        <div class="card">
-          <img src="Letter boxes final_cropped.jpg" alt="Letterboxes">
-          <div class="card-content">
-            <p class="card-title">Letterboxes</p>
-            <p class="card-artist">by Grant Stevenson</p>
-            <p class="card-artist"></p>
-            <p>Description of the painting goes here...</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
+  <!-- Footer Section -->
+  <footer class="w3-bar w3-black">
+    <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
+  </footer>
+
 </body>
+
 </html>
