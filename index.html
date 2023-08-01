@@ -2,137 +2,103 @@
 <html>
 <head>
   <title>Seagrass Gallery</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-    /* Custom styling for specific elements */
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Arial", sans-serif;
-    }
-    /* Style the logo */
-    .w3-bar-item img {
-      display: block;
-      margin: auto;
-    }
-    /* Add any additional custom styles here */
-    .card {
-      width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    
+    /* Navbar */
+    nav {
+      background-color: #000;
       padding: 10px;
-      margin: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .card-content {
-      padding: 10px 0;
-    }
-
-    .card-title {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .card-artist {
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* New styles for painting container */
-    .painting-container {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
     
-    /* Modified styles for the navbar */
-    .w3-bar {
-      display: flex;
-      align-items: center; /* Center items vertically */
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
     }
-
-    .w3-bar-item {
-      margin: 0 15px;
+    
+    .logo {
+      height: 85px;
     }
-
-    .w3-bar-item:first-child {
-      margin-left: 0;
+    
+    /* Main Content */
+    #about, #location {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
     }
-
-    .w3-bar-item:last-child {
-      margin-right: 0;
+    
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
     }
-    /* Footer styles */
-footer {
-  padding: 15px;
-  color: white;
-  font-size: 14px;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer img {
-  margin-top: 5px;
-}
+    
+    p {
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <div class="w3-bar w3-black w3-mobile">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-black"><img class="logo" src="seagrass_gallery_2_Street sign Cropped(1).png"></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">About</a>
-    <a href="Recent_paintings.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Recent paintings</a>
-    <a href="Contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Contact</a>
-  </div>
+  <nav>
+    <a href="index.html"><img class="logo" src="seagrass_gallery_2_Street sign Cropped(1).png" alt="Seagrass Gallery"></a>
+    <a href="index.html">About</a>
+    <a href="Recent_paintings.html">Recent paintings</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
   
   <!-- About Section -->
-  <div id="about" class="w3-container w3-center w3-mobile">
+  <div id="about">
     <h2>About</h2>
-    <br>
     <p>Seagrass Gallery is located at</p>
     <p>38 Moana Street, Otaki Beach,</p>
     <p>New Zealand.</p>
-    <br>
     <p>It is open every Sunday</p>
     <p>from October through March,</p>
     <p>10am to 4pm (essentially the warmer months)</p>
     <p>or by appointment.</p>
-    <br>
     <p>Around 30 works are on display at any one time,</p>
     <p>all priced and available for purchase.</p>
-    <br>
     <p>At the moment, all paintings are the work of</p>
     <p>Grant Stevenson, but as things develop,</p>
     <p>other artists will no doubt join the Gallery.</p>
-    <br>
     <p>Prices reflect the fact purchases are made</p>
     <p>directly from the artist.</p>
   </div>
 
   <!-- Location Section -->
-  <div id="location" class="w3-container w3-center w3-mobile">
+  <div id="location">
     <h2>Location</h2>
     <p>Seagrass Art Gallery is located at 38 Moana Street Ōtaki Beach, Ōtaki.</p>
-    <img src="staticmap.png" style="height: 500px; width: 1000px; margin: 5px;">
+    <img src="staticmap.png" alt="Map">
   </div>
   
   <!-- Footer Section -->
-<footer class="w3-bar w3-black w3-center">
-  <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
-  <img src="seagrass_gallery_2_Street sign Cropped(1).png" style="height: 40px; width: 40px;" alt="Seagrass Gallery Logo">
-</footer>
+  <footer>
+    <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-
