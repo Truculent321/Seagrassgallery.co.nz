@@ -1,6 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand">
+  <title>Seagrass Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    nav {
+      background-color: #3580C2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+    nav .logo {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    
+    nav div {
+      display: flex;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    /* Main Content */
+    #about,#location,#contact {
+      text-align: center;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+    
+    .section {
+      text-align: center;
+      padding: 40px;
+    }
+    
+    .section h2 {
+      margin-bottom: 20px;
+    }
+    
+    footer {
+      text-align: center;
+      background-color: black;
+      color: white;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
 <body>
-  <h1>Website currently under maintenance</h1>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html"><img class="logo" src="Seagrass_logo_cropped.png" alt="Seagrass Gallery"></a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+    </div>
+  </nav>
+  
+  <!-- About Section -->
+  <div class="section" id="about">
+    <h2>About</h2>
+    <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm (essentially the warmer months), or by appointment.</p>
+    <p>Around 30 works are on display at any one time, all priced and available for purchase. At the moment, all paintings are the work of Grant Stevenson,
+    <p>but as things develop, other artists will no doubt join the Gallery. Prices reflect the fact purchases are made directly from the artist.</p>
+  </div>
+
+  <!-- Location Section -->
+  <div class="section" id="location">
+    <h2>Location</h2>
+    <p>Seagrass Art Gallery is located at 38 Moana Street, Ōtaki Beach, New Zealand.</p>
+    <img src="staticmap.png" alt="Map">
+    <img src="IMG_8767.jpg" alt="Gallery">
+  </div>
+  
+  <!-- Contact Section -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries, you can get in touch with me:</p>
+    <p>Email - <a href="mailto:grantstevensononline@gmail.com">grantstevensononline@gmail.com</a></p>
+    <p>Phone - <a href="tel:0272314643">027 231 4643</a></p>
+  </div>
+    
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
