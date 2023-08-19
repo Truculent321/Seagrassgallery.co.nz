@@ -4,55 +4,62 @@
 <head>
   <title>Seagrass Gallery</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset some default styles */
+    body, h1, h2, h3, p, ul, ol, li {
       margin: 0;
       padding: 0;
+    }
+    
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
     
     /* Navbar */
     nav {
       background-color: #3580C2;
-      padding: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    
-    /* Main Content */
-    #abouttheartist, #paintings {
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
+      padding: 10px 20px;
     }
     
     nav a {
       color: white;
       text-decoration: none;
       padding: 10px;
+      transition: color 0.3s ease-in-out;
+    }
+    
+    nav a:hover {
+      color: #66c2ff;
     }
     
     .logo {
-      height: 85px;
+      height: 50px;
     }
     
-    h2 {
-      color: #333;
+    /* Main Content */
+    .section {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+    
+    .section h2 {
       border-bottom: 2px solid #333;
       padding-bottom: 5px;
     }
     
-    p {
-      line-height: 1.6;
-      margin: 5px 0;
+    .section img {
+      max-width: 100%;
     }
     
-    img {
-      max-width: 100%;
-  
-     /* Footer */
+    /* Footer */
     footer {
-      background-color: #3580C2;
+      background-color: #000;
       color: white;
       text-align: center;
       padding: 10px;
