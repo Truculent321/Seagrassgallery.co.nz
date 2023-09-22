@@ -25,6 +25,13 @@
       max-Height: 50px;
       margin-right: 20px;
     }
+
+    nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+
     
     nav div {
       display: flex;
@@ -72,13 +79,15 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav>
+    <nav>
+  <ul>
     <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrass Gallery"></a>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="Gallery.html">Gallery</a>
-    </div>
-  </nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <!-- Add other navigation items here -->
+  </ul>
+</nav>
+
   
   <!-- About Section -->
   <div class="section" id="about">
@@ -86,7 +95,7 @@
     <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm (essentially the warmer months), or by appointment.</p>
     <p>Around 30 works are on display at any one time, all priced and available for purchase. At the moment, all paintings are the work of Grant Stevenson,
     <p>but as things develop, other artists will no doubt join the Gallery. Prices reflect the fact purchases are made directly from the artist.</p>
-    <img src="IMG_8767.jpg" alt="Gallery">
+    <img src="IMG_8767.jpg" alt="Interior of Seagrass Gallery">
   </div>
 
   <!-- Location Section -->
