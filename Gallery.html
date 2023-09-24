@@ -15,7 +15,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand">
   <title>Seagrass Gallery</title>
-</head>
   <style>
     body {
       margin: 0;
@@ -68,12 +67,30 @@
     #Gallery img {
       max-width: 100%;
       height: auto;
+      cursor: pointer; /* Add cursor pointer to indicate clickable images */
     }
-    #gallery-title {
-      text-align: center;
-      margin: 20px 0; /* Adjust margin as needed */
-   }
     
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    /* Footer Styles */
     footer {
       text-align: center;
       background-color: black;
@@ -81,15 +98,16 @@
       padding: 10px 0;
       width: 100%;
     }
-         a {
-    text-decoration: none; /* Remove the default underline */
-    color: #333; /* Set the default text color */
-}
 
-a:hover {
-    color: #000; /* Change the text color on hover */
-    font-weight: bold; /* Make the text bold on hover */
-}
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      color: #000;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -123,130 +141,144 @@ a:hover {
     <p>Grant Stevenson QSM</p>
   </div>
 
-<h1 id="gallery-title">Gallery paintings</h1>
+  <h1 id="gallery-title">Gallery paintings</h1>
 
-<div id="Gallery">
+  <div id="Gallery">
+    <!-- Add a data-description attribute to each image with the description -->
     <div>
-        <img src="Rose_cropped.jpg">
-        <h2>A Rose</h2>
-        
-    </div>
-    <div>
-        <img src="Dungeon_cropped.jpg">
-        <h2>The Dungeon</h2>
-       
+      <img src="Rose_cropped.jpg" data-description="Acrylic on canvas">
+      <h2>A Rose</h2>
     </div>
     <div>
-        <img src="BOOKCASE_cropped.jpg">
-        <h2>The Case for Books</h2>
-        
+      <img src="Dungeon_cropped.jpg" data-description="">
+      <h2>The Dungeon</h2>
     </div>
     <div>
-        <img src="Goldfish_cropped.jpg">
-        <h2>Goldfish</h2>
-        
+      <img src="BOOKCASE_cropped.jpg" data-description="">
+      <h2>The case for books</h2>
     </div>
     <div>
-        <img src="GoldFishandlilyflower_cropped.jpg.jpg">
-        <h2>Goldfish and lily</h2>
-        
+      <img src="Goldfish_cropped.jpg" data-description="">
+      <h2>Goldfish</h2>
     </div>
     <div>
-        <img src=" Blue horizon_cropped.jpg">
-        <h2>Blue horizon</h2>
-        
+      <img src="GoldFishandlilyflower_cropped.jpg.jpg" data-description="">
+      <h2>Goldfish and lily</h2>
     </div>
     <div>
-        <img src="Blue horizon tiptych_cropped.jpg">
-        <h2>River</h2>
-        
+      <img src="Blue horizon_cropped.jpg" data-description="">
+      <h2>Blue horizon</h2>
     </div>
     <div>
-        <img src="Blue Bowl Final_cropped.jpg">
-        <h2>The blue bowl</h2>
-        
+      <img src="Blue horizon triptych_cropped.jpg" data-description="">
+      <h2>Blue horizon triptych</h2>
     </div>
     <div>
-        <img src="Scotland one.jpg">
-        <h2>Scottish Loch I</h2>
-        
+      <img src="Blue Bowl Final_cropped.jpg" data-description="">
+      <h2>The blue bowl</h2>
     </div>
     <div>
-        <img src="Scotland two.jpg">
-        <h2>Scottish Loch II</h2>
-        
+      <img src="Scotland one.jpg" data-description="">
+      <h2>Scottish loch I</h2>
     </div>
     <div>
-        <img src="Scotlandt3_cropped.jpg">
-        <h2>Scottish Loch III</h2>
-        
+      <img src="Scotland two.jpg" data-description="">
+      <h2>Scotland II</h2>
     </div>
     <div>
-        <img src="Hillsidehouses_cropped.jpg.jpg">
-        <h2>Hillside houses</h2>
-        
+      <img src="Scotland3_cropped.jpg" data-description="">
+      <h2>Scotland III</h2>
     </div>
     <div>
-        <img src="Houseswithchurch_cropped.jpg.jpg">
-        <h2>Houses with church</h2>
-        
+      <img src="Hillsidehouses_cropped.jpg.jpg" data-description="">
+      <h2>Hillside houses</h2>
     </div>
     <div>
-        <img src="Eight_houses_cropped.jpg">
-        <h2>Eight houses</h2>
-        
+      <img src="Houseswithchurch_cropped.jpg.jpg" data-description="">
+      <h2>Houses with church</h2>
     </div>
     <div>
-        <img src="Thehall_cropped.jpg">
-        <h2>The hall</h2>
-        
+      <img src="Eight_houses_cropped.jpg" data-description="">
+      <h2>Eight houses</h2>
     </div>
     <div>
-        <img src="Villa_cropped.jpg">
-        <h2>Villa</h2>
-        
+      <img src="Thehall_cropped.jpg" data-description="">
+      <h2>The hall</h2>
     </div>
     <div>
-        <img src="Stainedglasswindow_cropped.jpg">
-        <h2>Stained glass</h2>
-        
+      <img src="Villa_cropped.jpg" data-description="">
+      <h2>Villa</h2>
     </div>
-   <div>
-        <img src="Schism_cropped.jpg">
-        <h2>Schism</h2>
-        
+    <div>
+      <img src="Stainedglasswindow_cropped.jpg" data-description="">
+      <h2>Stained glass window</h2>
     </div>
-   <div>
-        <img src="Sapphire_cropped.jpg">
-        <h2>Sapphire</h2>
-        
+    <div>
+      <img src="Schism_cropped.jpg" data-description="">
+      <h2>Schism</h2>
     </div>
-   <div>
-        <img src="Nudescape_cropped.jpg">
-        <h2>Nudescape</h2>
-        
+    <div>
+      <img src="Sapphire_cropped.jpg" data-description="">
+      <h2>Sapphire</h2>
     </div>
-   <div>
-        <img src="Focusondots_cropped.jpg">
-        <h2>Dots</h2>
-        
+    <div>
+      <img src="Nudescape_cropped.jpg" data-description="">
+      <h2>Nudescape</h2>
     </div>
-   <div>
-        <img src="Westcoasttriptych_cropped.jpg">
-        <h2>Westcoast Triptych</h2>
-        
+    <div>
+      <img src="Focusondots_cropped.jpg" data-description="">
+      <h2>Focus on dots</h2>
     </div>
-   <div>
-        <img src="Flowers_cropped.jpg">
-        <h2>Flowers</h2>
-        
+    <div>
+      <img src="Westcoasttriptych_cropped.jpg" data-description="">
+      <h2>Westcoast triptych</h2>
     </div>
-</div>
+    <div>
+      <img src="Flowers_cropped.jpg" data-description="">
+      <h2>Garden Flowers</h2>
+    </div>
+    
+    
+    
+  </div>
+
+  <!-- Popup for image description -->
+  <div class="popup" id="imagePopup">
+    <div class="popup-content" id="imagePopupContent">
+      <span id="closePopup" style="cursor: pointer;">&times;</span>
+      <h2 id="popupTitle">Image Title</h2>
+      <p id="popupDescription">Image Description</p>
+    </div>
+  </div>
+
   <!-- Footer Section -->
   <footer>
     <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
-     <img src="seagrass_gallery_2_Street sign Cropped(1).png" height="50px" alt="footer logo">
+    <img src="seagrass_gallery_2_Street sign Cropped(1).png" height="50px" alt="footer logo">
   </footer>
 
+  <script>
+    // JavaScript for image popups
+    const images = document.querySelectorAll('#Gallery img');
+    const imagePopup = document.getElementById('imagePopup');
+    const imagePopupContent = document.getElementById('imagePopupContent');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupDescription = document.getElementById('popupDescription');
+    const closePopup = document.getElementById('closePopup');
+
+    images.forEach((image) => {
+      image.addEventListener('click', () => {
+        // Get the image description from the data-description attribute
+        const description = image.getAttribute('data-description');
+        popupTitle.textContent = image.nextElementSibling.textContent;
+        popupDescription.textContent = description;
+        imagePopup.style.display = 'flex';
+      });
+    });
+
+    closePopup.addEventListener('click', () => {
+      imagePopup.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
