@@ -261,27 +261,37 @@
   </footer>
 
   <script>
-    // JavaScript for image popups
-    const images = document.querySelectorAll('#Gallery img');
-    const imagePopup = document.getElementById('imagePopup');
-    const imagePopupContent = document.getElementById('imagePopupContent');
-    const popupTitle = document.getElementById('popupTitle');
-    const popupDescription = document.getElementById('popupDescription');
-    const closePopup = document.getElementById('closePopup');
+   // JavaScript for image popups
+const images = document.querySelectorAll('#Gallery img');
+const imagePopup = document.getElementById('imagePopup');
+const imagePopupContent = document.getElementById('imagePopupContent');
+const popupTitle = document.getElementById('popupTitle');
+const popupDescription = document.getElementById('popupDescription');
+const closePopup = document.getElementById('closePopup');
+const popupImage = document.createElement('img'); // Create an img element
 
-    images.forEach((image) => {
-      image.addEventListener('click', () => {
-        // Get the image description from the data-description attribute
-        const description = image.getAttribute('data-description');
-        popupTitle.textContent = image.nextElementSibling.textContent;
-        popupDescription.textContent = description;
-        imagePopup.style.display = 'flex';
-      });
-    });
+images.forEach((image) => {
+  image.addEventListener('click', () => {
+    // Get the image description from the data-description attribute
+    const description = image.getAttribute('data-description');
+    popupTitle.textContent = image.nextElementSibling.textContent;
+    popupDescription.textContent = description;
+    
+    // Set the src attribute of the popup image
+    popupImage.src = image.src;
+    popupImage.alt = image.alt;
+    
+    // Clear any previous content in the popup and add the new image
+    imagePopupContent.innerHTML = '';
+    imagePopupContent.appendChild(popupImage);
+    
+    imagePopup.style.display = 'flex';
+  });
+});
 
-    closePopup.addEventListener('click', () => {
-      imagePopup.style.display = 'none';
-    });
+closePopup.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+});
   </script>
 </body>
 </html>
