@@ -261,7 +261,7 @@
   </footer>
 
   <script>
-   // JavaScript for image popups
+  // JavaScript for image popups
 const images = document.querySelectorAll('#Gallery img');
 const imagePopup = document.getElementById('imagePopup');
 const imagePopupContent = document.getElementById('imagePopupContent');
@@ -289,8 +289,16 @@ images.forEach((image) => {
   });
 });
 
+// Close the popup when clicking the "X" button
 closePopup.addEventListener('click', () => {
   imagePopup.style.display = 'none';
+});
+
+// Close the popup when clicking anywhere outside of it (on the background overlay)
+imagePopup.addEventListener('click', (event) => {
+  if (event.target === imagePopup) {
+    imagePopup.style.display = 'none';
+  }
 });
   </script>
 </body>
