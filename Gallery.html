@@ -291,17 +291,22 @@ images.forEach((image) => {
   });
 });
 
-// Close the popup when clicking the "X" button
-closePopup.addEventListener('click', () => {
-  imagePopup.style.display = 'none';
-});
+  // Close the popup when clicking the "X" button
+    closePopup.addEventListener('click', () => {
+        closeImagePopup();
+    });
 
-// Close the popup when clicking anywhere outside of it (on the background overlay)
-imagePopup.addEventListener('click', (event) => {
-  if (event.target === imagePopup) {
-    imagePopup.style.display = 'none';
-  }
-});
+    // Close the popup when clicking anywhere outside of it (on the background overlay)
+    imagePopup.addEventListener('click', (event) => {
+        if (event.target === imagePopup) {
+            closeImagePopup();
+        }
+    });
+
+    // Function to close the image popup
+    function closeImagePopup() {
+        imagePopup.style.display = 'none';
+    }
   </script>
 </body>
 </html>
