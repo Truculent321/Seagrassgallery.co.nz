@@ -93,6 +93,19 @@
       background-color: white;
       padding: 20px;
       border-radius: 5px;
+      text-align: center;
+    }
+
+    /* Style the close button */
+    #closePopup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 5px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
     }
     
     /* Footer Styles */
@@ -112,31 +125,6 @@
     a:hover {
       color: #000;
       font-weight: bold;
-    }
-      .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .popup-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-    }
-
-    /* Limit the maximum width of images in the popup */
-    .popup-content img {
-        max-width: 100%;
-        height: auto;
     }
   </style>
 </head>
@@ -272,7 +260,7 @@
     
   </div>
 
-  <!-- Popup for image description -->
+   <!-- Popup for image description -->
   <div class="popup" id="imagePopup">
     <div class="popup-content" id="imagePopupContent">
       <span id="closePopup" style="cursor: pointer;">&times;</span>
@@ -328,22 +316,10 @@ images.forEach((image) => {
         }
     });
 
-  // Define the closeImagePopup function in the global scope
-function closeImagePopup() {
-  imagePopup.style.display = 'none';
-}
-
-// Attach event listeners after defining the function
-closePopup.addEventListener('click', () => {
-  closeImagePopup();
-});
-
-imagePopup.addEventListener('click', (event) => {
-  if (event.target === imagePopup) {
-    closeImagePopup();
-  }
-});
-
+    // Function to close the image popup
+    function closeImagePopup() {
+        imagePopup.style.display = 'none';
+    }
   </script>
 </body>
 </html>
