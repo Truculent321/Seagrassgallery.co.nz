@@ -255,74 +255,13 @@
       <img src="Flowers_cropped.jpg" data-description="">
       <h2>Garden Flowers</h2>
     </div>
-    
-    
-    
-  </div>
-
-   <!-- Popup for image description -->
-  <div class="popup" id="imagePopup">
-    <div class="popup-content" id="imagePopupContent">
-      <span id="closePopup" style="cursor: pointer;">&times;</span>
-      <h2 id="popupTitle">Image Title</h2>
-      <p id="popupDescription">Image Description</p>
     </div>
-  </div>
 
   <!-- Footer Section -->
   <footer>
     <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
     <img src="seagrass_gallery_2_Street sign Cropped(1).png" height="50px" alt="footer logo">
   </footer>
-<script>
-  // JavaScript for image popups
-  const images = document.querySelectorAll('#Gallery img');
-  const imagePopup = document.getElementById('imagePopup');
-  const imagePopupContent = document.getElementById('imagePopupContent');
-  const popupTitle = document.getElementById('popupTitle');
-  const popupDescription = document.getElementById('popupDescription');
-  const closePopup = document.getElementById('closePopup');
-  const popupImage = document.createElement('img'); // Create an img element
-
-  images.forEach((image) => {
-    image.addEventListener('click', () => {
-      // Get the image description from the data-description attribute
-      const description = image.getAttribute('data-description');
-      const title = image.nextElementSibling.textContent; // Get image title from the adjacent h2 element
-
-      // Populate the popup with the title, description, and image
-      popupTitle.textContent = title;
-      popupDescription.textContent = description;
-
-      // Set the src attribute of the popup image
-      popupImage.src = image.src;
-      popupImage.alt = title;
-
-      // Clear any previous content in the popup and add the new image
-      imagePopupContent.innerHTML = '';
-      imagePopupContent.appendChild(popupImage);
-
-      imagePopup.style.display = 'flex';
-    });
-  });
-
-  // Close the popup when clicking the "X" button
-  closePopup.addEventListener('click', () => {
-    closeImagePopup();
-  });
-
-  // Close the popup when clicking anywhere outside of it (on the background overlay)
-  imagePopup.addEventListener('click', (event) => {
-    if (event.target === imagePopup) {
-      closeImagePopup();
-    }
-  });
-
-  // Function to close the image popup
-  function closeImagePopup() {
-    imagePopup.style.display = 'none';
-  }
-</script>
 
 </body>
 </html>
