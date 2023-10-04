@@ -328,10 +328,22 @@ images.forEach((image) => {
         }
     });
 
-    // Function to close the image popup
-    function closeImagePopup() {
-        imagePopup.style.display = 'none';
-    }
+  // Define the closeImagePopup function in the global scope
+function closeImagePopup() {
+  imagePopup.style.display = 'none';
+}
+
+// Attach event listeners after defining the function
+closePopup.addEventListener('click', () => {
+  closeImagePopup();
+});
+
+imagePopup.addEventListener('click', (event) => {
+  if (event.target === imagePopup) {
+    closeImagePopup();
+  }
+});
+
   </script>
 </body>
 </html>
