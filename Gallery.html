@@ -43,7 +43,7 @@
     }
     
     /* Main Content */
-    #abouttheartist, #Gallery {
+    #abouttheartist, #Gallery,#contact {
       text-align: center;
       max-width: 90%;
       margin: 40px auto;
@@ -84,29 +84,32 @@
       padding: 10px 0;
       width: 100%;
     }
+    footer.div {
+      background-color: #000;
+      color: white;
+      padding: 10px;
+      width: 100%
+    }
 
     a {
       text-decoration: none;
       color: #333;
     }
-    a:hover.social-icon {
-    color: #9a05f0; /* Change the text color on hover */
-}
+
 a:hover {
     color:#000;
 }
-    .social-icon {
-    color:#ffffff;
-    max-width: 100px;
 
-
-}
-.social-icon {
+.social-icon-insta {
+  color: white;
   justify-content: center;
   margin-left: 10px;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+a:hover.social-icon-insta {
+    color: #9a05f0; /* Change the text color on hover */
 }
   </style>
 </head>
@@ -242,15 +245,24 @@ a:hover {
       </div>
     </div>
 
+     <!-- Contact Section -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to get in touch with me</p>
+    <p>Email - <a href="mailto:grantstevensononline@gmail.com">grantstevenononline@gmail.com</a></p>
+    <p>Phone - <a href="tel:0272314643">+64272314643</a></p>
+  </div>
+
   <!-- Footer Section -->
   <footer>
     <p>&copy; 2023 Seagrass Gallery. All rights reserved.</p>
     <img src="seagrass_gallery_2_Street sign Cropped(1).png" height="50px" alt="footer logo">
-    <a class="social-icon" href="https://www.instagram.com/seagrassgallery/" target="_blank">
-      <ion-icon name="logo-instagram"></ion-icon>
-    </a>
+    <div>
+    <a class="social-icon-insta" href="https://www.instagram.com/seagrassgallery/" target="_blank">
+    <ion-icon name="logo-instagram"></ion-icon></a>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
   </footer>
 
 </body>
