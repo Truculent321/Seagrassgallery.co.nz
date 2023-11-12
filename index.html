@@ -69,8 +69,16 @@
 
     /* Main Content */
     #about,
+    #abouttheartist,
+    #Gallery-Title,
+    #Gallery,
+    #Blue-Horizon-Title,
+    #Blue-horizon,
+    #Dot-series-Title,
+    #Dot-series,
     #location,
-    #contact {
+    #contact
+     {
       background-color: #f5f5f5;
       max-width: 70%;
       text-align: center;
@@ -80,6 +88,52 @@
       margin-top: 20px;
 
 
+    }
+    #Gallery,
+    #Blue-horizon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+
+
+    #Gallery div {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #Gallery img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #Blue-Horizon,
+    #Dot-series {
+      text-align: center;
+      max-width: 70%;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    #Blue-horizon div,
+    #Dot-series div {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #Blue-horizon img,
+    #Dot-series img {
+      max-width: 100%;
+      height: auto;
     }
 
     .section {
@@ -169,11 +223,7 @@
 <body>
   <!-- Navbar -->
   <nav>
-    <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrass Gallery"></a>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="Gallery.html">Gallery</a>
-    </div>
+    <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrassgallery-Logo"></a>
   </nav>
 
   <!-- About Section -->
@@ -186,6 +236,234 @@
     <p>but as things develop, other artists will no doubt join the Gallery. Prices reflect the fact purchases are made
       directly from the artist.</p>
     <img src="IMG_8767.jpg" alt="Interior of Seagrass Gallery" width="1200px">
+  </div>
+ 
+  <div id="abouttheartist">
+    <h2>About the Artist</h2>
+    <br>
+    <p>I think I was always supposed to be a painter.</p>
+    <p>It's not until I retired from a busy life organizing</p>
+    <p>major public events in Wellington that I started to</p>
+    <p>take painting seriously.</p>
+    <br>
+    <p>You will see two basic styles of acrylic painting in</p>
+    <p>the way I work. Some paintings are rendered in a</p>
+    <p>tight, geometric, exact way showing an understanding</p>
+    <p>of objects and perspective, others are more</p>
+    <p>loosely created and happen more quickly.</p>
+    <br>
+    <p>I shall keep going at both, perhaps until the louder voice</p>
+    <p>drowns out the other.</p>
+    <br><br>
+    <p>Grant Stevenson QSM</p>
+  </div>
+
+  <!-- Inside the #Gallery div -->
+  <div id="Gallery-Title">
+    <h1>Gallery Paintings</h1>
+  </div>
+  <div id="Gallery">
+    <div>
+      <img src="Blue Bowl Final_cropped.jpg">
+      <h2>The Blue Bowl</h2>
+    </div>
+    <div>
+      <img src="Dungeon_cropped.jpg">
+      <h2>The Dungeon</h2>
+    </div>
+    <div>
+      <img src="Tomb_cropped.jpg">
+      <h2>Tomb</h2>
+    </div>
+    <div>
+      <img src="Eight_houses_cropped.jpg">
+      <h2>Eight Houses</h2>
+    </div>
+    <div>
+      <img src="Flower_focus_cropped.jpg">
+      <h2>Flower Focus</h2>
+    </div>
+    <div>
+      <img src="Goldfish_cropped.jpg">
+      <h2>Goldfish</h2>
+    </div>
+    <div>
+      <img src="GoldFishandlilyflower_cropped.jpg.jpg">
+      <h2>Goldfish and Lily Flower</h2>
+    </div>
+    <div>
+      <img src="Hillsidehouses_cropped.jpg.jpg">
+      <h2>Hillside Houses</h2>
+    </div>
+    <div>
+      <img src="Houses_cropped.jpg">
+      <h2>Houses</h2>
+    </div>
+    <div>
+      <img src="Houseswithchurch_cropped.jpg.jpg">
+      <h2>Houses with Church</h2>
+    </div>
+    <div>
+      <img src="Pedestrian_crossing_cropped">
+      <h2>Pedestrian Crossing</h2>
+    </div>
+    <div>
+      <img src="Letterboxes_of_Manakau_cropped.jpg">
+      <h2>Letterboxes of Manakau</h2>
+    </div>
+    <div>
+      <img src="Horowhenua_cropped.jpg">
+      <h2>Horowhenua</h2>
+    </div>
+    <div>
+      <img src="Nudescape_cropped.jpg">
+      <h2>Nudescape</h2>
+    </div>
+    <div>
+      <img src="Mediterranean Goddess unframed.jpg">
+      <h2>Mediterranean Goddess</h2>
+    </div>
+    <div>
+      <img src="Rose_cropped.jpg">
+      <h2>Rose</h2>
+    </div>
+    <div>
+      <img src="Pastel_Rose.jpg">
+      <h2>pastel Rose</h2>
+    </div>
+    <div>
+      <img src="Sapphire_cropped.jpg">
+      <h2>Sapphire</h2>
+    </div>
+    <div>
+      <img src="Schism_cropped.jpg">
+      <h2>Schism</h2>
+    </div>
+    <div>
+      <img src="Stainedglasswindow_cropped.jpg">
+      <h2>Stained glass Window</h2>
+    </div>
+    <div>
+      <img src="Thehall_cropped.jpg">
+      <h2>The Hall</h2>
+    </div>
+    <div>
+      <img src="Villa_cropped.jpg">
+      <h2>Villa</h2>
+    </div>
+    <div>
+      <img src="West_Coast.jpg">
+      <h2>West coast</h2>
+    </div>
+    <div>
+      <img src="Westcoasttriptych_cropped.jpg">
+      <h2>Westcoast Triptych</h2>
+    </div>
+    <div>
+      <img src="Her_Red_Shoes.jpg">
+      <h2>Her red shoes</h2>
+    </div>
+    <div>
+      <img src="Light_Flare.jpg">
+      <h2>Light Flare</h2>
+    </div>
+    <div>
+      <img src="Lady_of_the_Lamp.jpg">
+      <h2>lady of the Lamp</h2>
+    </div>
+    <div>
+      <img src="Impressions_of_Flowers.jpg">
+      <h2>Impressions of Flowers</h2>
+    </div>
+    <div>
+      <img src="House_with_Plans.jpg">
+      <h2>House with Plans</h2>
+    </div>
+    <div>
+      <img src="The_Key.jpg">
+      <h2>The Key</h2>
+    </div>
+    <div>
+      <img src="IMG_9028.jpg">
+      <h2>Artefact</h2>
+    </div>
+    <div>
+      <img src="Moody_Houses.jpg">
+      <h2>Moody Houses</h2>
+    </div>
+    <div>
+      <img src="Gabion_Wall.jpg">
+      <h2>The Stone Wall</h2>
+      <p>Size: (1.2m</p>
+    </div>
+    <div>
+      <img src="Celtic_Cross.jpg">
+      <h2>Celtic cross</h2>
+    </div>
+  </div>
+
+  <div id="Blue-Horizon-Title">
+    <h1>Blue Horizon series</h1>
+  </div>
+  <div id="Blue-horizon">
+    <div>
+      <img src="River Blue horizon.jpg">
+      <h2>River Triptych</h2>
+    </div>
+    <div>
+      <img src="Stream.jpg">
+      <h2>Stream</h2>
+    </div>
+    <div>
+      <img src="Clouds_cropped.jpg">
+      <h2>Clouds</h2>
+    </div>
+    <div>
+      <img src="Castle_on_a_lotch_cropped.jpg">
+      <h2>Castle on a loch</h2>
+    </div>
+    <div>
+      <img src="Azure blue horizon.jpg">
+      <h2>Horizon Azure blue</h2>
+    </div>
+    <div>
+      <img src="Scottish loch 1.jpg">
+      <h2>Scottish loch I</h2>
+    </div>
+    <div>
+      <img src="Scotland two.jpg">
+      <h2>Scottish loch II</h2>
+    </div>
+    <div>
+      <img src="Scottish loch 3.jpg">
+      <h2>Scottish loch III</h2>
+    </div>
+  </div>
+  </div>
+  <div id="Dot-series-Title">
+    <h1>Dot series</h1>
+  </div>
+  <div id="Dot-series">
+    <div>
+      <img src="Focusondots_cropped.jpg">
+      <h2>Focus on dots</h2>
+    </div>
+    <div>
+      <img src="Bluegreendots_cropped.jpg">
+      <h2>Dots Blue Green</h2>
+    </div>
+    <div>
+      <img src="Latestwork_cropped.jpg">
+      <h2></h2>
+    </div>
+    <div>
+      <img src=".jpg">
+      <h2></h2>
+    </div>
+    <div>
+      <img src=".jpg">
+      <h2></h2>
+    </div>
   </div>
 
   <!-- Location Section -->
