@@ -164,7 +164,9 @@
 
     a {
       text-decoration: none;
+      /* Remove the default underline */
       color: #ffffff;
+      /* Set the default text color */
     }
 
     a:hover {
@@ -197,6 +199,7 @@
       color: #26a7de;
      
     }
+
 
     .button {
       background-color: #3580C2;
@@ -254,6 +257,7 @@
   <!-- Inside the #Gallery div -->
   <div id="Gallery-Title">
     <h1>Gallery Paintings</h1>
+    <button id="toggleGallery" class="button">Toggle</button>
   </div>
   <div id="Gallery">
     <div>
@@ -263,10 +267,12 @@
     <div>
       <img src="Dungeon_cropped.jpg">
       <h2>The Dungeon</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Tomb_cropped.jpg">
       <h2>Tomb</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Eight_houses_cropped.jpg">
@@ -279,6 +285,7 @@
     <div>
       <img src="BOOKCASE_cropped.jpg">
       <h2>The Case For Books</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Goldfish_cropped.jpg">
@@ -299,6 +306,7 @@
     <div>
       <img src="Houseswithchurch_cropped.jpg.jpg">
       <h2>Houses with Church</h2>
+      <p style="color:red;">SOLD</p>
     </div>
   <div>
   <img src="Church and Corner Store.jpg">
@@ -311,6 +319,7 @@
     <div>
       <img src="Letterboxes_of_Manakau_cropped.jpg">
       <h2>Letterboxes of Manakau</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Horowhenua_cropped.jpg">
@@ -327,10 +336,12 @@
     <div>
       <img src="Rose_cropped.jpg">
       <h2>Rose</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Pastel_Rose.jpg">
       <h2>pastel Rose</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Sapphire_cropped.jpg">
@@ -343,10 +354,12 @@
     <div>
       <img src="Stainedglasswindow_cropped.jpg">
       <h2>Stained glass Window</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Thehall_cropped.jpg">
       <h2>The Hall</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Villa_cropped.jpg">
@@ -363,6 +376,7 @@
     <div>
       <img src="Her_Red_Shoes.jpg">
       <h2>Her red shoes</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Light_Flare.jpg">
@@ -371,6 +385,7 @@
     <div>
       <img src="Lady_of_the_Lamp.jpg">
       <h2>lady of the Lamp</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="Impressions_of_Flowers.jpg">
@@ -379,6 +394,7 @@
     <div>
       <img src="House_with_Plans.jpg">
       <h2>House with Plans</h2>
+      <p style="color:red;">SOLD</p>
     </div>
     <div>
       <img src="The_Key.jpg">
@@ -405,6 +421,7 @@
 
   <div id="Blue-Horizon-Title">
     <h1>Blue Horizon series</h1>
+    <button id="toggleBlueHorizon" class="button">Toggle</button>
   </div>
   <div id="Blue-horizon">
     <div>
@@ -438,11 +455,13 @@
     <div>
       <img src="Scottish loch 3.jpg">
       <h2>Scottish loch III</h2>
+      <p style="color:red;">SOLD</p>
     </div>
   </div>
   </div>
   <div id="Dot-series-Title">
     <h1>Dot series</h1>
+    <button id="toggleDotSeries" class="button">Toggle</button>
   </div>
   <div id="Dot-series">
     <div>
@@ -492,9 +511,26 @@
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </div>
-    <p><a href="Terms.html">Terms of Use</a></p>
+    <!-- Link to Terms of Use -->
+  <p><a href="Terms.html">Terms of Use</a></p>
   </footer>
+  <script>
+    function addToggleFunctionality(buttonId, sectionId) {
+      document.getElementById(buttonId).addEventListener('click', function () {
+        var section = document.getElementById(sectionId);
+        section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'grid' : 'none';
+      });
+    }
 
+    // Toggle functionality for Gallery Section
+    addToggleFunctionality('toggleGallery', 'Gallery');
+
+    // Toggle functionality for Blue Horizon Series Section
+    addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
+
+    // Toggle functionality for Dot Series Section
+    addToggleFunctionality('toggleDotSeries', 'Dot-series');
+  </script>
 </body>
 
 </html>
