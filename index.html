@@ -537,23 +537,24 @@
     <!-- Link to Terms of Use -->
   <p><a href="Terms.html">Terms of Use</a></p>
   </footer>
-  <script>
-    function addToggleFunctionality(buttonId, sectionId) {
-      document.getElementById(buttonId).addEventListener('click', function () {
-        var section = document.getElementById(sectionId);
-        section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'grid' : 'none';
-      });
-    }
+ <script>
+  function addToggleFunctionality(buttonId, sectionId) {
+    document.getElementById(buttonId).addEventListener('click', function () {
+      var section = document.getElementById(sectionId);
+      section.style.display = (section.style.display === 'grid' || section.style.display === '') ? 'none' : 'grid';
+    });
+  }
 
-    // Toggle functionality for Gallery Section
-    addToggleFunctionality('toggleGallery', 'Gallery');
+  // Toggle functionality for Gallery Section
+  addToggleFunctionality('toggleGallery', 'Gallery');
 
-    // Toggle functionality for Blue Horizon Series Section
-    addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
+  // Toggle functionality for Blue Horizon Series Section
+  addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
 
-    // Toggle functionality for Dot Series Section
-    addToggleFunctionality('toggleDotSeries', 'Dot-series');
-  </script>
+  // Toggle functionality for Dot Series Section
+  addToggleFunctionality('toggleDotSeries', 'Dot-series');
+</script>
+
 </body>
 
 </html>
