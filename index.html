@@ -53,23 +53,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 0;
-    }
-
-    nav .logo {
-      max-width: 120px;
-      max-height: 70px;
-    }
-
-
-    nav div {
-      display: flex;
+      padding: 20px;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000000; /* Change to the desired hover color */
+    }
+
+    nav .logo {
+      max-width: 150px;
+      max-height: 75px;
+      margin-bottom:20px
     }
 
     /* Main Content */
@@ -82,7 +83,9 @@
     #Dot-series-Title,
     #Dot-series,
     #location,
-    #contact
+    #contact,
+    #contact-form
+
      {
       background-color: #f5f5f5;
       max-width: 70%;
@@ -253,7 +256,7 @@
     .social-icons a:hover {
       color: #3580C2; /* Change to the color you want on hover */
     }
-    
+
     input,
         textarea {
             width: 100%;
@@ -261,11 +264,11 @@
             margin-bottom: 16px;
             box-sizing: border-box;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
         }
 
         label {
-            color: #3580C2;
+            color: #000000;
             text-align: left
         }
 
@@ -275,8 +278,17 @@
 <body>
   <!-- Navbar -->
   <nav>
+   <header>
+    <div>
     <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrassgallery-Logo"></a>
+    <br>
+    <a href="#Gallery-Title">Gallery</a>
+    <a href="#contact">Contact</a>
+    </div>
+  </header>
+    
   </nav>
+  
 
   <!-- About Section -->
   <div class="section" id="about">
@@ -668,15 +680,21 @@
   <div class="section" id="contact">
     <h2>Contact</h2>
     <p>If you have any questions or want to book an appointment</p>
-    <p>Feel free to get in touch with me using the form below.</p>
-    <form action="https://formspree.io/f/mrgnezoz" method="POST">
+    <p>Feel free to get in touch with me through Email or Phone.</p>
+    <a href="mailto:grantstevensononline@gmail.com" class="button">Email me</a>
+    <a href="tel:0272314643" class="button">Call me</a </div>
+    </div>
+  <div class="section" id="contact-form">
+    <h2>Contact form</h2>
+    <p>If you prefer to send a detailed message please fill out the form below.</p>
+  <form action="https://formspree.io/f/mrgnezoz" method="POST">
     <label for="email">Your email:</label>
     <input type="email" name="email" id="email" required>
     <label for="phone">Your Phone number:</label>
     <input type="phone" name="phone" id="phone" required>
     <label for="message">Your message:</label>
     <textarea name="message" id="message" required></textarea>
-    <button type="submit">Send</button>
+    <button type="submit" class="button">Send Message</button>
     </form>
   </div>
 
@@ -692,31 +710,54 @@
         </a></li>
     </ul>
     <br>
-    <div><a href="Terms.html">Terms of use</a></div>
+    <div>
+    <a href="Terms.html">Terms of use</a>
+    <a href="Privacy.html">Privacy Policy</a>
+
+    </div>
+    
   </footer>
 
   <!-- Image Popup -->
   <div id="popup">
-    <div id="close-btn" onclick="togglePopup()">X</div>
+    <div id="close-btn" onclick="togglePopup()">Close</div>
     <img id="popup-image" src="" alt="Popup Image">
   </div>
   <script>
-    // Function to toggle the image popup
+      document.addEventListener('DOMContentLoaded', function () {
+    // ... (Previous JavaScript code)
+
+    // Function to close the popup when the close button is clicked
+    document.getElementById('close-btn').addEventListener('click', function () {
+      togglePopup();
+    });
+      
+  
+      // Hide the sections initially
+      document.getElementById('Gallery').style.display = 'none';
+      document.getElementById('Blue-horizon').style.display = 'none';
+      document.getElementById('Dot-series').style.display = 'none';
+  
+      // Toggle functionality for Gallery Section
+      addToggleFunctionality('toggleGallery', 'Gallery');
+  
+      // Toggle functionality for Blue Horizon Series Section
+      addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
+  
+      // Toggle functionality for Dot Series Section
+      addToggleFunctionality('toggleDotSeries', 'Dot-series');
+  
+      // Function to toggle the image popup
       function togglePopup() {
         var popup = document.getElementById('popup');
         popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'flex' : 'none';
       }
-    function addToggleFunctionality(buttonId, sectionId) {
-      document.getElementById(buttonId).addEventListener('click', function () {
-        var section = document.getElementById(sectionId);
-        section.style.display = (section.style.display === 'grid' || section.style.display === '') ? 'none' : 'grid';
-      });
-    }
-     // Function to add popup functionality to images
-     function addPopupFunctionality(imageSelector) {
+  
+      // Function to add popup functionality to images
+      function addPopupFunctionality(imageSelector) {
         var images = document.querySelectorAll(imageSelector);
         var popupImage = document.getElementById('popup-image');
-    
+  
         images.forEach(function (image) {
           image.addEventListener('click', function () {
             togglePopup();
@@ -725,25 +766,29 @@
           });
         });
       }
-        // Add popup functionality to Gallery images
-        addPopupFunctionality('#Gallery img');
+  
+      // Add popup functionality to Gallery images
+      addPopupFunctionality('#Gallery img');
+  
+      // Add popup functionality to Blue Horizon Series images
+      addPopupFunctionality('#Blue-horizon img');
+  
+      // Add popup functionality to Dot Series images
+      addPopupFunctionality('#Dot-series img');
+  
+      // Function to toggle section visibility
+      function addToggleFunctionality(buttonId, sectionId) {
+        document.getElementById(buttonId).addEventListener('click', function () {
+          var section = document.getElementById(sectionId);
+          section.style.display = (section.style.display === 'grid' || section.style.display === '') ? 'none' : 'grid';
+        });
+      }
+    });
+  </script>
+  
+  
+  
     
-    // Add popup functionality to Blue Horizon Series images
-    addPopupFunctionality('#Blue-horizon img');
-    
-    // Add popup functionality to Dot Series images
-    addPopupFunctionality('#Dot-series img');
-    
-    
-    // Toggle functionality for Gallery Section
-    addToggleFunctionality('toggleGallery', 'Gallery');
-    
-    // Toggle functionality for Blue Horizon Series Section
-    addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
-    
-    // Toggle functionality for Dot Series Section
-    addToggleFunctionality('toggleDotSeries', 'Dot-series');
-    </script>
 </body>
 
 </html>
