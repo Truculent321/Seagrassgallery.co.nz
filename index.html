@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description"
 content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand. Explore a diverse collection of contemporary art. Visit us every Sunday from October through March or by appointment." />
 <meta name="keywords" content="art gallery, contemporary art, Ōtaki Beach, New Zealand, Seagrass Gallery" />
@@ -38,6 +38,9 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-K75NG7PPSE');
 </script>
+<script async src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
+
 
 <link rel="canonical" href="https://seagrassgallery.co.nz" />
 
@@ -46,9 +49,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', 'Times New Roman', Times, serif, sans-serif;
-  background: linear-gradient(to right, #f5f5f5, #ffffff); /* Add your preferred colors */
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
 }
-
 
 nav {
   background-color: #3580C2;
@@ -80,7 +82,6 @@ nav .logo:hover {
   transition-duration: 0.5s ease;
 }
 
-
 /* Main Content */
 section {
   background-color: #f5f5f5;
@@ -89,7 +90,7 @@ section {
   margin: 40px auto 20px;
   padding: 20px;
   border-radius: 20px;
-  border-color:#000
+  border-color: #000;
 }
 
 #Gallery,
@@ -164,7 +165,6 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
 #popup {
   display: none;
   position: fixed;
@@ -178,8 +178,8 @@ a {
 }
 
 #popup img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  height: auto;
   border: 2px solid white;
   border-radius: 8px;
 }
@@ -251,14 +251,12 @@ label {
   text-align: center;
   display: flex;
   align-items: center;
-  
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
   box-sizing: border-box;
-  
 }
 
 .overlay h2 {
@@ -268,6 +266,7 @@ label {
 .overlay p {
   margin-bottom: 0;
 }
+
 #contact-form {
   text-align: center;
   margin-top: 40px; /* Adjust this value to bring the contact form closer to the center */
@@ -279,6 +278,62 @@ label {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Add styles for smaller screens */
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Gallery Sections */
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.gallery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Apply the styles to specific gallery sections */
+#Gallery,
+#Blue-horizon,
+#Dot-series {
+  margin: 20px auto;
+  max-width: 70%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .gallery-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  #Gallery,
+  #Blue-horizon,
+  #Dot-series {
+    max-width: 90%;
+  }
+}
 
 </style>
 </head>
@@ -690,7 +745,7 @@ label {
 <div class="section" id="location">
 <h2>Location</h2>
 <p>Seagrass Art Gallery is located at 38 Moana Street, Ōtaki Beach, New Zealand.</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2489963845132!2d175.11737601234128!3d-40.7345462712709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d409193f0d43cb5%3A0x2873deb15f6d1391!2sSeagrass%20Gallery%2C!5e0!3m2!1sen!2snz!4v1700896080063!5m2!1sen!2snz" width="800" height="400" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2489963845132!2d175.11737601234128!3d-40.7345462712709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d409193f0d43cb5%3A0x2873deb15f6d1391!2sSeagrass%20Gallery%2C!5e0!3m2!1sen!2snz!4v1700896080063!5m2!1sen!2snz" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <!-- Contact Section -->
 <div class="section" id="contact">
