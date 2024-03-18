@@ -60,21 +60,25 @@ nav {
   padding: 20px;
 }
 
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  max-width: 175px;
+  margin-right: auto; /* Aligns the logo to the left */
+}
+
 nav a {
   color: #fff;
-  margin: 0 30px;
+  margin: 0 20px; /* Decreased the margin */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: #000;
-}
-
-nav .logo {
-  max-width: 175px;
-  margin: 0 auto; /* Update this line to center the logo */
-  margin-bottom: 20px;
 }
 
 nav .logo:hover {
