@@ -110,6 +110,7 @@ section {
 #Blue-horizon div,
 #Dot-series div {
   border: 1px solid #ccc;
+  border-radius: 30px;
   padding: 10px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -126,7 +127,9 @@ section {
 #Blue-horizon img,
 #Dot-series img {
   max-width: 100%;
+  border-radius: 30px;
   height: auto;
+  
 }
 
 .section {
@@ -145,6 +148,10 @@ section {
   margin-top: 20px;
 }
 
+.section div {
+  width: auto;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -152,7 +159,8 @@ a {
 
 .button {
   background-color: #3580C2;
-  border: none;
+  border: #fff;
+  border-radius: 30px;
   color: #fff;
   padding: 15px 32px;
   text-align: center;
@@ -282,13 +290,6 @@ label {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
-  /* Add styles for smaller screens */
-  body {
-    font-size: 14px;
-  }
-}
-
 /* Gallery Sections */
 .gallery-section {
   display: grid;
@@ -325,18 +326,20 @@ label {
   border-radius: 20px;
   border: 1px solid #000;
 }
-
-/* Mobile responsiveness */
 @media only screen and (max-width: 768px) {
-  .gallery-section {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* Add styles for smaller screens */
+  body {
+    font-size: 14px;
+  }
+  #popup img {
+  max-width: 75%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px; }
+  .section div {
+    width: 768px;
   }
 
-  #Gallery,
-  #Blue-horizon,
-  #Dot-series {
-    max-width: 90%;
-  }
 }
 
 </style>
