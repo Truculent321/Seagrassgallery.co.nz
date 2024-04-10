@@ -46,299 +46,309 @@ gtag('config', 'G-K75NG7PPSE');
 
 <style>
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', 'Times New Roman', Times, serif, sans-serif;
-  background: linear-gradient(to right, #f5f5f5, #ffffff);
+margin: 0;
+padding: 0;
+font-family: 'Georgia', 'Times New Roman', Times, serif, sans-serif;
+background: linear-gradient(to right, #f5f5f5, #ffffff);
 }
 
 nav {
-  background-color: #3580C2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+background-color: #3580C2;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
 }
 
 nav div {
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 }
 
 nav .logo {
-  max-width: 175px;
-  margin-right: auto; /* Aligns the logo to the left */
-}
-
-nav a {
-  color: #fff;
-  margin: 0 20px; /* Decreased the margin */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #000;
+max-width: 175px;
+margin-right: auto; /* Aligns the logo to the left */
 }
 
 nav .logo:hover {
-  transform: scale(1.05);
-  transition-duration: 0.5s ease;
+transform: scale(1.05);
+transition-duration: 0.5s ease;
 }
 
 /* Main Content */
 section {
-  background-color: #f5f5f5;
-  max-width: 70%;
-  text-align: center;
-  margin: 40px auto 20px;
-  padding: 20px;
-  border-radius: 20px;
-  border-color: #000;
+background-color: #f5f5f5;
+max-width: 70%;
+text-align: center;
+margin: 40px auto 20px;
+padding: 20px;
+border-radius: 20px;
+border-color: #000;
 }
 
 #Gallery,
 #Blue-horizon,
 #Dot-series {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  text-align: center;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+text-align: center;
 }
 
 #Gallery div,
 #Blue-horizon div,
 #Dot-series div {
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
+border: 1px solid #ccc;
+border-radius: 30px;
+padding: 10px;
+text-align: center;
+transition: transform 0.3s ease;
 }
 
 #Gallery div:hover,
 #Blue-horizon div:hover,
 #Dot-series div:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+transform: scale(1.05);
+cursor: pointer;
 }
 
 #Gallery img,
 #Blue-horizon img,
 #Dot-series img {
-  max-width: 100%;
-  border-radius: 0px;
-  height: auto;
-  
+max-width: 100%;
+border-radius: 0px;
+height: auto;
+
 }
 
 .section {
-  text-align: center;
-  padding: 40px;
-  transform: scale(1.02);
+text-align: center;
+padding: 40px;
+transform: scale(1.02);
 }
 
 .section h2 {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .section img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
+max-width: 100%;
+height: auto;
+margin-top: 20px;
 }
 
 .section div {
-  width: auto;
+width: auto;
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+text-decoration: none;
+color: #fff;
+}
+
+.overlay-button {
+background-color: #3580C2;
+border: #fff;
+border-radius: 10px;
+color: #fff;
+padding: 8px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 6px 4px;
+margin-top: 40px;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overlay-button:hover {
+transform: scale(1.1);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .button {
-  background-color: #3580C2;
-  border: #fff;
-  border-radius: 30px;
-  color: #fff;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+background-color: #3580C2;
+border: #fff;
+border-radius: 30px;
+color: #fff;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+transform: scale(1.1);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+justify-content: center;
+align-items: center;
 }
 
 #popup img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 8px;
+max-width: 100%;
+height: auto;
+border: 2px solid white;
+border-radius: 8px;
 }
 
 #close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 20px;
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+color: white;
+font-size: 20px;
 }
 
 footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+background-color: #000;
+color: #fff;
+padding: 20px;
+text-align: center;
 }
 
 footer a:hover {
-  color: #3580C2;
-  transition-duration: 0.3s;
+color: #3580C2;
+transition-duration: 0.3s;
 }
 
 .social-icons {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .social-icons li {
-  display: inline-block;
-  margin-left: 10px;
+display: inline-block;
+margin-left: 10px;
 }
 
 .social-icons a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-  transition: color 0.1s ease-in-out;
+color: #fff;
+text-decoration: none;
+font-size: 24px;
+transition: color 0.1s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: #3580C2;
+color: #3580C2;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+width: 100%;
+padding: 8px;
+margin-bottom: 16px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 
 label {
-  color: #000;
-  text-align: left;
+color: #000;
+text-align: left;
 }
 
 #home {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: url(Interior.jpg) center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
+position: relative;
+height: 100vh;
+width: 100vw;
+background: url(Interior.jpg) center/cover no-repeat;
+color: #fff;
+text-align: center;
+display: flex;
+align-items: center;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  box-sizing: border-box;
+background: rgba(0, 0, 0, 0.3);
+width: 100%;
+box-sizing: border-box;
 }
 
 .overlay h2 {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .overlay p {
-  margin-bottom: 0;
+margin-bottom: 0;
 }
 
 #contact-form {
-  text-align: center;
-  margin-top: 40px; /* Adjust this value to bring the contact form closer to the center */
+text-align: center;
+margin-top: 40px; /* Adjust this value to bring the contact form closer to the center */
 }
 
 /* Add this style to center the form within its container */
 #contact-form form {
-  max-width: 800px;
-  margin: 0 auto;
+max-width: 800px;
+margin: 0 auto;
 }
 
 /* Gallery Sections */
 .gallery-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  text-align: center;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+text-align: center;
 }
 
 .gallery-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
+border: 1px solid #ccc;
+padding: 10px;
+text-align: center;
+transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+transform: scale(1.05);
+cursor: pointer;
 }
 
 .gallery-item img {
-  max-width: 100%;
-  height: auto;
+max-width: 100%;
+height: auto;
 }
 
 /* Apply the styles to specific gallery sections */
 #Gallery,
 #Blue-horizon,
 #Dot-series {
-  margin: 20px auto;
-  max-width: 70%;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #000;
+margin: 20px auto;
+max-width: 70%;
+background-color: #f5f5f5;
+padding: 20px;
+border-radius: 20px;
+border: 1px solid #000;
 }
 @media only screen and (max-width: 768px) {
-  /* Add styles for smaller screens */
-  body {
-    font-size: 14px;
-  }
-  #popup img {
-  max-width: 75%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 8px; }
-  .section div {
-    width: 768px;
-  }
+/* Add styles for smaller screens */
+body {
+font-size: 14px;
+}
+#popup img {
+max-width: 75%;
+height: auto;
+border: 2px solid white;
+border-radius: 8px; }
+.section div {
+width: 768px;
+}
 
 }
 
@@ -351,9 +361,6 @@ label {
 <header>
 <div>
 <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrassgallery-Logo"></a>
-<br>
-<a href="#Gallery-Title">Gallery</a>
-<a href="#contact">Contact</a>
 </div>
 </header>
 
@@ -363,6 +370,8 @@ label {
 <div class="full-background" id="home">
 <div class="overlay">
 <h2>Welcome to Seagrassgallery.co.nz</h2>
+<button class="overlay-button"onclick="location.href='#contact';">Book an Appointment</button>
+<button class ="overlay-button"onclick="location.href='#Gallery-Title';">Explore the Gallery</button>
 </div>
 </div>
 
@@ -799,7 +808,13 @@ label {
 <!-- Image Popup -->
 <div id="popup">
 <div id="close-btn" onclick="togglePopup()">Close</div>
+<div id="prev-btn" class="arrow-btn">
+<i class="fas fa-chevron-left"></i>
+</div>
 <img id="popup-image" src="" alt="Popup Image">
+<div id="next-btn" class="arrow-btn">
+<i class="fas fa-chevron-right"></i>
+</div>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -862,6 +877,66 @@ section.style.display = (section.style.display === 'grid' || section.style.displ
 });
 }
 });
+
+// Function to navigate to the next image in the popup
+function nextImage() {
+var popupImage = document.getElementById('popup-image');
+var currentImageIndex = parseInt(popupImage.dataset.index);
+var images = document.querySelectorAll('.popup-image');
+
+if (currentImageIndex < images.length - 1) {
+currentImageIndex++;
+} else {
+currentImageIndex = 0; // Wrap around to the first image
+}
+
+popupImage.src = images[currentImageIndex].src;
+popupImage.dataset.index = currentImageIndex;
+}
+
+// Function to navigate to the previous image in the popup
+function prevImage() {
+var popupImage = document.getElementById('popup-image');
+var currentImageIndex = parseInt(popupImage.dataset.index);
+var images = document.querySelectorAll('.popup-image');
+
+if (currentImageIndex > 0) {
+currentImageIndex--;
+} else {
+currentImageIndex = images.length - 1; // Wrap around to the last image
+}
+
+popupImage.src = images[currentImageIndex].src;
+popupImage.dataset.index = currentImageIndex;
+}
+
+// Add event listeners for arrow clicks
+document.getElementById('prev-btn').addEventListener('click', prevImage);
+document.getElementById('next-btn').addEventListener('click', nextImage);
+
+// Add popup functionality to Gallery images
+addPopupFunctionality('#Gallery img');
+
+// Add popup functionality to Blue Horizon Series images
+addPopupFunctionality('#Blue-horizon img');
+
+// Add popup functionality to Dot Series images
+addPopupFunctionality('#Dot-series img');
+
+// Function to add popup functionality to images
+function addPopupFunctionality(imageSelector) {
+var images = document.querySelectorAll(imageSelector);
+
+images.forEach(function (image, index) {
+image.addEventListener('click', function () {
+togglePopup();
+var imageUrl = this.src;
+var popupImage = document.getElementById('popup-image');
+popupImage.src = imageUrl;
+popupImage.dataset.index = index; // Store the index of the clicked image
+});
+});
+}
 </script>
 
 
