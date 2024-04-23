@@ -40,6 +40,44 @@ gtag('config', 'G-K75NG7PPSE');
 </script>
 <script async src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
+<script>
+// Function to navigate to the next image in the popup
+function nextImage() {
+    var popupImage = document.getElementById('popup-image');
+    var currentImageIndex = parseInt(popupImage.dataset.index);
+    var images = document.querySelectorAll('.popup-image');
+
+    if (currentImageIndex < images.length - 1) {
+        currentImageIndex++;
+    } else {
+        currentImageIndex = 0; // Wrap around to the first image
+    }
+
+    popupImage.src = images[currentImageIndex].src;
+    popupImage.dataset.index = currentImageIndex;
+}
+
+// Function to navigate to the previous image in the popup
+function prevImage() {
+    var popupImage = document.getElementById('popup-image');
+    var currentImageIndex = parseInt(popupImage.dataset.index);
+    var images = document.querySelectorAll('.popup-image');
+
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+    } else {
+        currentImageIndex = images.length - 1; // Wrap around to the last image
+    }
+
+    popupImage.src = images[currentImageIndex].src;
+    popupImage.dataset.index = currentImageIndex;
+}
+
+// Add event listeners for arrow clicks
+document.getElementById('prev-btn').addEventListener('click', prevImage);
+document.getElementById('next-btn').addEventListener('click', nextImage);
+</script>
+
 
 
 <link rel="canonical" href="https://seagrassgallery.co.nz" />
