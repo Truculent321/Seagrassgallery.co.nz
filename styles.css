@@ -5,6 +5,10 @@ body {
     background: linear-gradient(to right, #f5f5f5, #ffffff);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
     background-color: #3580C2;
     display: flex;
@@ -133,7 +137,9 @@ a {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    scroll-behavior: smooth;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .button:hover {
