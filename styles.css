@@ -1,11 +1,17 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', 'Times New Roman', Times, serif, sans-serif;
     background: linear-gradient(45deg, #f5f5f5, #ffffff);
+}
+
+/* Responsive scaling */
+meta {
+    content: "width=device-width, initial-scale=1.0";
 }
 
 nav {
@@ -25,7 +31,6 @@ nav div {
 nav .logo {
     max-width: 175px;
     margin-right: auto;
-    
 }
 
 nav .logo:hover {
@@ -41,7 +46,7 @@ nav .logo:active {
 /* Main Content */
 section {
     background-color: #f5f5f5;
-    max-width: 70%;
+    max-width: 90%;
     text-align: center;
     margin: 40px auto 20px;
     padding: 20px;
@@ -81,7 +86,6 @@ section {
     max-width: 100%;
     border-radius: 0px;
     height: auto;
-
 }
 
 .section {
@@ -152,8 +156,8 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
- /* Styles for the arrow buttons */
- .arrow-btn {
+/* Styles for the arrow buttons */
+.arrow-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -168,29 +172,29 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 999;
-  }
+}
 
-  /* Styles for the left arrow */
-  .left-arrow::before {
+/* Styles for the left arrow */
+.left-arrow::before {
     content: "\2190"; /* Unicode for left arrow */
     font-size: 20px;
-  }
+}
 
-  /* Styles for the right arrow */
-  .right-arrow::after {
+/* Styles for the right arrow */
+.right-arrow::after {
     content: "\2192"; /* Unicode for right arrow */
     font-size: 20px;
-  }
+}
 
-  /* Positioning for the left arrow */
-  #prev-btn {
+/* Positioning for the left arrow */
+#prev-btn {
     left: 10px;
-  }
+}
 
-  /* Positioning for the right arrow */
-  #next-btn {
+/* Positioning for the right arrow */
+#next-btn {
     right: 10px;
-  }
+}
 
 #popup {
     display: none;
@@ -336,20 +340,32 @@ label {
 #Blue-horizon,
 #Dot-series {
     margin: 20px auto;
-    max-width: 70%;
+    max-width: 90%;
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 50px;
     border: 2px solid #000;
 }
 
-
-
+/* Responsive styles for smaller screens */
 @media only screen and (max-width: 768px) {
 
-    /* Add styles for smaller screens */
     body {
         font-size: 14px;
+    }
+
+    nav {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    section {
+        max-width: 90%;
     }
 
     #popup img {
@@ -360,7 +376,26 @@ label {
     }
 
     .section div {
-        width: 768px;
+        width: 100%;
+    }
+
+    .overlay-button, .button {
+        width: calc(100% - 40px); /* Adjusted button width */
+        margin-right: 20px; /* Adjusted margin */
+        margin-bottom: 10px; /* Added margin */
+    }
+
+    .gallery-section {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .social-icons li {
+        margin-left: 5px;
     }
 
 }
+
