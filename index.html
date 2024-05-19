@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description"
     content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand. Explore a diverse collection of contemporary art. Visit us every Sunday from October through March or by appointment." />
   <meta name="keywords" content="art gallery, contemporary art, Ōtaki Beach, New Zealand, Seagrass Gallery" />
@@ -11,8 +10,7 @@
 
   <title>Seagrass Gallery - Contemporary Art Gallery in Ōtaki Beach, NZ</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image">
-  <link rel="script" href="script.js">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://seagrassgallery.co.nz" />
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
@@ -34,51 +32,12 @@
   <meta name="twitter:site" content="@Seagrassgallery" />
 
   <!-- Google tag (gtag.js) for tracking -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-K75NG7PPSE');
-  </script>
-  <script async src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
-  <script>
-    // Function to navigate to the next image in the popup
-    function nextImage() {
-      var popupImage = document.getElementById('popup-image');
-      var currentImageIndex = parseInt(popupImage.dataset.index);
-      var images = document.querySelectorAll('.popup-image');
-
-      if (currentImageIndex < images.length - 1) {
-        currentImageIndex++;
-      } else {
-        currentImageIndex = 0; // Wrap around to the first image
-      }
-
-      popupImage.src = images[currentImageIndex].src;
-      popupImage.dataset.index = currentImageIndex;
-    }
-
-    // Function to navigate to the previous image in the popup
-    function prevImage() {
-      var popupImage = document.getElementById('popup-image');
-      var currentImageIndex = parseInt(popupImage.dataset.index);
-      var images = document.querySelectorAll('.popup-image');
-
-      if (currentImageIndex > 0) {
-        currentImageIndex--;
-      } else {
-        currentImageIndex = images.length - 1; // Wrap around to the last image
-      }
-
-      popupImage.src = images[currentImageIndex].src;
-      popupImage.dataset.index = currentImageIndex;
-    }
-
-    // Add event listeners for arrow clicks
-    document.getElementById('prev-btn').addEventListener('click', prevImage);
-    document.getElementById('next-btn').addEventListener('click', nextImage);
   </script>
 </head>
 
@@ -89,10 +48,9 @@
       <div>
         <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrassgallery-Logo"></a>
       </div>
+      
     </header>
-
   </nav>
-
 
   <div class="full-background" id="home">
     <div class="overlay">
@@ -102,10 +60,8 @@
     </div>
   </div>
 
-
-
-  <!-- About Section -->
-  <div class="section" id="about">
+   <!-- About Section -->
+   <div class="section" id="about">
     <h2>About</h2>
     <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm</p>
     <p>(essentially the warmer months), or by appointment. Around 30 works are on</p>
@@ -460,7 +416,6 @@
       <img src="Focusondots_cropped.jpg">
       <h2>Focus on dots</h2>
       <p>460 x 310</p>
-      <p>Floating Frame:</p>
       <p>$495</p>
     </div>
     <div>
@@ -478,8 +433,6 @@
     <div>
       <img src="Field_of_dreams.jpg">
       <h2>Dot Dreaming</h2>
-      <p>Acrylic on water colour paper</p>
-      <p> Framed, museum glass</p>
       <p>$875</p>
     </div>
   </div>
@@ -535,90 +488,72 @@
 
   </footer>
 
-  <!-- Image Popup -->
-  <div id="popup">
-    <div id="close-btn" onclick="togglePopup()">Close</div>
-    <div id="prev-btn" class="arrow-btn">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-    <img id="popup-image" src="" alt="Popup Image">
-    <div id="next-btn" class="arrow-btn">
-      <i class="fas fa-chevron-right"></i>
-    </div>
+ <!-- Image Popup -->
+<div id="popup">
+  <div id="close-btn">CLOSE</div>
+  <div id="prev-btn" class="arrow-btn">
+    <i class="fas fa-chevron-left"></i>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // ... (Previous JavaScript code)
+  <img id="popup-image" src="" alt="Popup Image">
+  <div id="next-btn" class="arrow-btn">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>
 
-      // Function to close the popup when the close button is clicked
-      document.getElementById('close-btn').addEventListener('click', function () {
-        togglePopup();
+<script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Hide the sections initially
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Blue-horizon').style.display = 'none';
+    document.getElementById('Dot-series').style.display = 'none';
+
+    // Toggle functionality for sections
+    addToggleFunctionality('toggleGallery', 'Gallery');
+    addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
+    addToggleFunctionality('toggleDotSeries', 'Dot-series');
+
+    // Function to toggle the image popup
+    function togglePopup() {
+      var popup = document.getElementById('popup');
+      popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'flex' : 'none';
+    }
+
+    // Function to add popup functionality to images
+    function addPopupFunctionality(imageSelector) {
+      var images = document.querySelectorAll(imageSelector);
+      var popupImage = document.getElementById('popup-image');
+
+      images.forEach(function (image, index) {
+        image.addEventListener('click', function () {
+          togglePopup();
+          popupImage.src = this.src;
+          popupImage.dataset.index = index;
+          popupImage.dataset.selector = imageSelector; // Store the selector
+        });
       });
+    }
 
+    // Add popup functionality to images
+    addPopupFunctionality('#Gallery img');
+    addPopupFunctionality('#Blue-horizon img');
+    addPopupFunctionality('#Dot-series img');
 
-      // Hide the sections initially
-      document.getElementById('Gallery').style.display = 'none';
-      document.getElementById('Blue-horizon').style.display = 'none';
-      document.getElementById('Dot-series').style.display = 'none';
-
-      // Toggle functionality for Gallery Section
-      addToggleFunctionality('toggleGallery', 'Gallery');
-
-      // Toggle functionality for Blue Horizon Series Section
-      addToggleFunctionality('toggleBlueHorizon', 'Blue-horizon');
-
-      // Toggle functionality for Dot Series Section
-      addToggleFunctionality('toggleDotSeries', 'Dot-series');
-
-      // Function to toggle the image popup
-      function togglePopup() {
-        var popup = document.getElementById('popup');
-        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'flex' : 'none';
-      }
-
-      // Function to add popup functionality to images
-      function addPopupFunctionality(imageSelector) {
-        var images = document.querySelectorAll(imageSelector);
-        var popupImage = document.getElementById('popup-image');
-
-        images.forEach(function (image) {
-          image.addEventListener('click', function () {
-            togglePopup();
-            var imageUrl = this.src;
-            popupImage.src = imageUrl;
-          });
-        });
-      }
-
-      // Add popup functionality to Gallery images
-      addPopupFunctionality('#Gallery img');
-
-      // Add popup functionality to Blue Horizon Series images
-      addPopupFunctionality('#Blue-horizon img');
-
-      // Add popup functionality to Dot Series images
-      addPopupFunctionality('#Dot-series img');
-
-      // Function to toggle section visibility
-      function addToggleFunctionality(buttonId, sectionId) {
-        document.getElementById(buttonId).addEventListener('click', function () {
-          var section = document.getElementById(sectionId);
-          section.style.display = (section.style.display === 'grid' || section.style.display === '') ? 'none' : 'grid';
-        });
-      }
-    });
+    // Function to toggle section visibility
+    function addToggleFunctionality(buttonId, sectionId) {
+      document.getElementById(buttonId).addEventListener('click', function () {
+        var section = document.getElementById(sectionId);
+        section.style.display = (section.style.display === 'grid' || section.style.display === '') ? 'none' : 'grid';
+      });
+    }
 
     // Function to navigate to the next image in the popup
     function nextImage() {
       var popupImage = document.getElementById('popup-image');
       var currentImageIndex = parseInt(popupImage.dataset.index);
-      var images = document.querySelectorAll('.popup-image');
+      var images = document.querySelectorAll(popupImage.dataset.selector);
 
-      if (currentImageIndex < images.length - 1) {
-        currentImageIndex++;
-      } else {
-        currentImageIndex = 0; // Wrap around to the first image
-      }
+      currentImageIndex = (currentImageIndex + 1) % images.length;
 
       popupImage.src = images[currentImageIndex].src;
       popupImage.dataset.index = currentImageIndex;
@@ -628,13 +563,9 @@
     function prevImage() {
       var popupImage = document.getElementById('popup-image');
       var currentImageIndex = parseInt(popupImage.dataset.index);
-      var images = document.querySelectorAll('.popup-image');
+      var images = document.querySelectorAll(popupImage.dataset.selector);
 
-      if (currentImageIndex > 0) {
-        currentImageIndex--;
-      } else {
-        currentImageIndex = images.length - 1; // Wrap around to the last image
-      }
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
 
       popupImage.src = images[currentImageIndex].src;
       popupImage.dataset.index = currentImageIndex;
@@ -643,33 +574,9 @@
     // Add event listeners for arrow clicks
     document.getElementById('prev-btn').addEventListener('click', prevImage);
     document.getElementById('next-btn').addEventListener('click', nextImage);
-
-    // Add popup functionality to Gallery images
-    addPopupFunctionality('#Gallery img');
-
-    // Add popup functionality to Blue Horizon Series images
-    addPopupFunctionality('#Blue-horizon img');
-
-    // Add popup functionality to Dot Series images
-    addPopupFunctionality('#Dot-series img');
-
-    // Function to add popup functionality to images
-    function addPopupFunctionality(imageSelector) {
-      var images = document.querySelectorAll(imageSelector);
-
-      images.forEach(function (image, index) {
-        image.addEventListener('click', function () {
-          togglePopup();
-          var imageUrl = this.src;
-          var popupImage = document.getElementById('popup-image');
-          popupImage.src = imageUrl;
-          popupImage.dataset.index = index; // Store the index of the clicked image
-        });
-      });
-    }
-  </script>
-
-
+    document.getElementById('close-btn').addEventListener('click', togglePopup);
+  });
+</script>
 
 
 </body>
