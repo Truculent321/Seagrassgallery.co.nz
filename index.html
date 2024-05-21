@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand. Explore a diverse collection of contemporary art. Visit us every Sunday from October through March or by appointment." />
+    content="Seagrass Gallery - Art Gallery in Ōtaki Beach, New Zealand. Visit every Sunday from October through March or by appointment." />
   <meta name="keywords" content="art gallery, contemporary art, Ōtaki Beach, New Zealand, Seagrass Gallery" />
   <meta name="author" content="Levi Graham">
 
@@ -14,6 +15,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://seagrassgallery.co.nz" />
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 
   <!-- Add Open Graph (OG) meta tags for social media sharing -->
   <meta property="og:type" content="website" />
@@ -44,11 +46,20 @@
 <body>
   <!-- Navbar -->
   <nav>
+    <div class="burger-menu" id="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+  </div>
     <header>
       <div>
         <a href="index.html"><img class="logo" src="Logo.png" alt="Seagrassgallery-Logo"></a>
       </div>
-      
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+  </ul>
     </header>
   </nav>
 
@@ -62,7 +73,7 @@
 
    <!-- About Section -->
    <div class="section" id="about">
-    <h2>About</h2>
+    <h1>About</h1>
     <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm</p>
     <p>(essentially the warmer months), or by appointment. Around 30 works are on</p>
     <p> display at any one time, all priced and available for purchase. At the moment</p>
@@ -73,7 +84,7 @@
   </div>
 
   <div class="section" id="abouttheartist">
-    <h2>About the Artist</h2>
+    <h1>About the Artist</h1>
     <br>
     <p>I think I was always supposed to be a painter.</p>
     <p>It's not until I retired from a busy life organizing</p>
