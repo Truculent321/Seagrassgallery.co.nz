@@ -100,11 +100,6 @@ a {
     flex-wrap: wrap;
   }
   
-  .Blue-horizon .column, .Dot-series .column {
-    flex: 1;
-    padding: 5px;
-  }
-  
   .button {
     cursor: pointer;
   }
