@@ -45,18 +45,18 @@
 <body>
   <!-- Navbar -->
   <nav>
-    <header>
-      <div>
-        <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#Gallery-Title">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </header>
-  </nav>
+    <div class="nav-wrapper fade-in">
+        <div id="logo-container">
+            <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Gallery-Title">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
   <div class="full-background" id="home">
     <div class="overlay">
@@ -247,26 +247,24 @@
     </form>
   </div>
 
-  <!-- Footer section -->
+   <!-- Footer Section -->
   <footer>
-    <img src="/images/seagrass_gallery_2_Street sign Cropped(1).png" style="width: 300px;" alt="footer image">
-    <p>&copy; 2024 Seagrassgallery. All rights reserved.</p>
-    <ul class="social-icons">
-      <li><a href="https://www.instagram.com/seagrassgallery/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram"></i>
-        </a></li>
-      <li><a href="https://www.twitter.com/seagrassgallery/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-twitter"></i>
-        </a></li>
-    </ul>
-    <br>
-    <div>
-      <a href="Terms.html">Terms of use</a>
-      <a href="Privacy.html">Privacy Policy</a>
-      <h5>Website by | <a href="https://agencydigital.co.nz/">Agencydigital.co.nz</a></h5>
+    <div class="footer-wrapper">
+        <div class="footer-logo">
+            <img src="/images/seagrass_gallery_2_Street sign Cropped(1).png" alt="Seagrassgallery-Logo">
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Seagrassgallery. All rights reserved.</p>
+            <a href="Terms.html">Terms of use</a>
+            <a href="Privacy.html">Privacy policy</a>
+        </div>
+        <ul class="social-icons">
+            <li><a href="#facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
     </div>
-
-  </footer>
+</footer>
 
   <!-- Image Popup -->
   <div id="popup">
