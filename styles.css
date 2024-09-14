@@ -135,8 +135,13 @@ a {
     color: #fff;
 }
 
+.overlay-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+}
+
 .overlay-button {
-    width: 200px; /* Fixed width */
+    flex-grow: 1; /* Ensures equal button width */
     background-color: #3580C2;
     border: #fff;
     border-radius: 1000px;
@@ -144,7 +149,6 @@ a {
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     letter-spacing: 1px;
     margin-right: 20px;
@@ -154,6 +158,7 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #3580C2;
 }
+
 
 .overlay-button:hover {
     transform: translateY(-5px);
