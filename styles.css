@@ -136,7 +136,7 @@ a {
 }
 
 .overlay-button {
-    width: 25vh;
+    width: 200px; /* Fixed width */
     background-color: #3580C2;
     border: #fff;
     border-radius: 1000px;
@@ -161,6 +161,7 @@ a {
     background-color: transparent;
     border-color: #fff;
 }
+
 
 .button {
     background-color: #3580C2;
