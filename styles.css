@@ -142,6 +142,24 @@ nav.logo.tranparent {
     padding: 40px;
 }
 
+.section, #business-hours {
+    flex: 1; /* Allows both sections to take up equal space */
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Adds space between sections */
+    gap: 20px; /* Adds space between the two sections */
+  }
+
+  #business-hours {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+
 a {
     text-decoration: none;
     color: #fff;
@@ -526,6 +544,7 @@ p {
     margin-top: 40px;
     /* Adjust this value to bring the contact form closer to the center */
 }
+
 
 /* Add this style to center the form within its container */
 #contact-form form {
