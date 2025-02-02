@@ -32,14 +32,19 @@
   <meta name="twitter:image" content="https://twitter.com/Seagrassgallery/header_photo" />
   <meta name="twitter:site" content="@Seagrassgallery" />
 
-  <!-- Google tag (gtag.js) for tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-K75NG7PPSE');
-  </script>
+ <!-- Google tag (gtag.js) for tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Configure GA with cookie_domain set to 'auto' or specify your domain if needed
+  gtag('config', 'G-K75NG7PPSE', {
+    'cookie_domain': 'auto'
+  });
+</script>
+
 </head>
 
 <body class="">
