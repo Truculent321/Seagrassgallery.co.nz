@@ -611,10 +611,10 @@ label {
   
   @keyframes slideshow {
     0% {
-      background-image: url('/Truculent321-Seagrassgallery.co.nz-03fdea6//images/Interior.jpg');
+      background-image: url('/images/Interior.jpg');
     }
     33% {
-      background-image: url('/Truculent321-Seagrassgallery.co.nz-03fdea6//images/Kapiti\ Blue\ Horizon.JPG');
+      background-image: url('/images/Kapiti\ Blue\ Horizon.JPG');
   }
 }
   
