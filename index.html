@@ -31,77 +31,71 @@
     content="Explore a diverse collection of art at Seagrass Gallery in Ōtaki Beach, New Zealand. Open every Sunday from October through March or by appointment." />
   <meta name="twitter:image" content="https://twitter.com/Seagrassgallery/header_photo" />
   <meta name="twitter:site" content="@Seagrassgallery" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16988369350"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) for tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    // Configure GA with cookie_domain set to 'auto' or specify your domain if needed
-    gtag('config', 'G-K75NG7PPSE', {
-      'cookie_domain': 'auto'
-    });
-  </script>
-
+  gtag('config', 'AW-16988369350');
+</script>
 </head>
 
 <body class="">
   <!-- Navbar -->
   <nav class="header">
     <div class="nav-wrapper">
-      <div id="logo-container">
-        <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#Gallery-Title">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <div id="logo-container">
+            <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Gallery-Title">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
 
   <div class="full-background" id="home">
     <div class="overlay">
       <h1>Welcome to Seagrassgallery.co.nz</h1>
       <button class="overlay-button" onclick="location.href='#contact';">Book an Appointment</button>
       <button class="overlay-button" onclick="location.href='#Gallery-Title';">Explore the Gallery</button>
-      <button class="overlay-button" onclick="location.href='#Gallery-Title';">...</button>
     </div>
   </div>
 
-  <!-- About Section -->
-  <div class="section" id="about">
-    <h1>About The Gallery</h1>
-    <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm</p>
-    <p>(essentially the warmer months), or by appointment. Around 30 works are on</p>
-    <p> display at any one time, all priced and available for purchase. At the moment</p>
-    <p>all paintings are the work of Grant Stevenson, but as things develop, other artists</p>
-    <p>will no doubt join the Gallery. Prices reflect the fact purchases are made</p>
-    <p>directly from the artist.</p>
-  </div>
-  <div class="section" id="abouttheartist">
-    <h1>About the Artist</h1>
-    <p>I think I was always supposed to be a painter.</p>
-    <p>It's not until I retired from a busy life organizing</p>
-    <p>major public events in Wellington that I started to</p>
-    <p>take painting seriously.</p>
-    <p>You will see two basic styles of acrylic painting in</p>
-    <p>the way I work. Some paintings are rendered in a</p>
-    <p>tight, geometric, exact way showing an understanding</p>
-    <p>of objects and perspective, others are more</p>
-    <p>loosely created and happen more quickly.</p>
-    <p>I shall keep going at both, perhaps until the louder voice</p>
-    <p>drowns out the other.</p>
-    <p>Grant Stevenson QSM</p>
-  </div>
+ <!-- About Section -->
+<div class="section" id="about">
+  <h1>About</h1>
+  <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm</p>
+  <p>(essentially the warmer months), or by appointment. Around 30 works are on</p>
+  <p> display at any one time, all priced and available for purchase. At the moment</p>
+  <p>all paintings are the work of Grant Stevenson, but as things develop, other artists</p>
+  <p>will no doubt join the Gallery. Prices reflect the fact purchases are made</p>
+  <p>directly from the artist.</p>
+</div>
+<div class="section" id="abouttheartist">
+  <h1>About the Artist</h1>
+  <p>I think I was always supposed to be a painter.</p>
+  <p>It's not until I retired from a busy life organizing</p>
+  <p>major public events in Wellington that I started to</p>
+  <p>take painting seriously.</p>
+  <p>You will see two basic styles of acrylic painting in</p>
+  <p>the way I work. Some paintings are rendered in a</p>
+  <p>tight, geometric, exact way showing an understanding</p>
+  <p>of objects and perspective, others are more</p>
+  <p>loosely created and happen more quickly.</p>
+  <p>I shall keep going at both, perhaps until the louder voice</p>
+  <p>drowns out the other.</p>
+  <p>Grant Stevenson QSM</p>
+</div>
+ 
 
 
 
-
-  <div class="section" id="Gallery-Title">
+    <div class="section" id="Gallery-Title">
     <h1>Gallery Paintings</h1>
     <button id="toggleGallery" class="button">Toggle</button>
   </div>
@@ -226,7 +220,11 @@
       </div>
     </div>
   </div>
-  
+
+  <a href="#top" class="back-to-top" id="back-to-top">↑ Back to Top</a>
+
+
+
   <!-- Location Section -->
   <div class="section" id="location">
     <h2>Location</h2>
@@ -243,7 +241,7 @@
     <p>Every Sunday: 10:00 AM - 4:00 PM</p>
     <p>To schedule a visit please use the provided contact details and get in touch with me directly</p>
   </section>
-
+  
   <!-- Contact Section -->
   <div class="section" id="contact">
     <h2>Contact</h2>
@@ -269,50 +267,50 @@
 
 
 
-  <!-- Footer Section -->
-  <footer>
+<!-- Footer Section -->
+<footer>
     <div class="footer-wrapper">
-      <div class="footer-logo">
-        <img src="/images/seagrass_gallery_2_Street sign Cropped(1).png" alt="Seagrassgallery-Logo">
-      </div>
-
-      <div class="footer-nav">
-        <nav class="footer">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#Gallery-Title">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-content">
-        <p>&copy; 2024 Seagrassgallery. All rights reserved.</p>
-        <a href="Terms.html">Terms of use</a>
-        <a href="Privacy.html">Privacy policy</a>
-      </div>
-
-      <ul class="social-icons">
-        <li><a href="https://www.facebook.com/profile.php?id=61565108044052"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://x.com/@Seagrassgallery"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.instagram.com/Seagrassgallery"><i class="fab fa-instagram"></i></a></li>
-      </ul>
+        <div class="footer-logo">
+            <img src="/images/seagrass_gallery_2_Street sign Cropped(1).png" alt="Seagrassgallery-Logo">
+        </div>
+        
+        <div class="footer-nav">
+            <nav class="footer">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Gallery-Title">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="footer-content">
+            <p>&copy; 2024 Seagrassgallery. All rights reserved.</p>
+            <a href="Terms.html">Terms of use</a>
+            <a href="Privacy.html">Privacy policy</a>
+        </div>
+        
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/profile.php?id=61565108044052"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://x.com/@Seagrassgallery"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/Seagrassgallery"><i class="fab fa-instagram"></i></a></li>
+        </ul>
     </div>
-  </footer>
+</footer>
 
-  <!-- Image Popup -->
-  <div id="popup">
-    <div id="close-btn">CLOSE</div>
-    <div id="prev-btn" class="arrow-btn">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-    <img id="popup-image" class="#" src="" alt="Popup Image">
-    <div id="img-title" class="#">Popup Title</div> <!-- Title goes here -->
-    <div id="next-btn" class="arrow-btn">
-      <i class="fas fa-chevron-right"></i>
-    </div>
+<!-- Image Popup -->
+<div id="popup">
+  <div id="close-btn">CLOSE</div>
+  <div id="prev-btn" class="arrow-btn">
+    <i class="fas fa-chevron-left"></i>
   </div>
+  <img id="popup-image" class="#" src="" alt="Popup Image">
+  <div id="img-title" class="#">Popup Title</div> <!-- Title goes here -->
+  <div id="next-btn" class="arrow-btn">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>
 
 
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
@@ -323,33 +321,33 @@
       // Gallery toggle
       const gallery = document.querySelector('.Gallery');
       const toggleGalleryButton = document.getElementById('toggleGallery');
-
+  
       if (toggleGalleryButton) {
         toggleGalleryButton.addEventListener('click', function () {
           toggleSectionVisibility(gallery, toggleGalleryButton);
         });
       }
-
+  
       // Blue Horizon series toggle
       const blueHorizon = document.querySelector('.Blue-horizon');
       const toggleBlueHorizonButton = document.getElementById('togglebluehorizon');
-
+  
       if (toggleBlueHorizonButton) {
         toggleBlueHorizonButton.addEventListener('click', function () {
           toggleSectionVisibility(blueHorizon, toggleBlueHorizonButton);
         });
       }
-
+  
       // Dot Series toggle
       const dotSeries = document.querySelector('.Dot-series');
       const toggleDotSeriesButton = document.getElementById('toggledotseries');
-
+  
       if (toggleDotSeriesButton) {
         toggleDotSeriesButton.addEventListener('click', function () {
           toggleSectionVisibility(dotSeries, toggleDotSeriesButton);
         });
       }
-
+  
       // Function to toggle section visibility
       function toggleSectionVisibility(section, button) {
         if (section.style.display === 'none' || section.style.display === '') {
@@ -360,85 +358,85 @@
           button.textContent = 'Show';
         }
       }
-
-      // Titles for each painting (this could be from your backend or statically set here)
-      const paintingTitles = [
-        "Blue Bowl Final",
-        "Dungeon",
-        "Tomb",
-        "Eight houses",
-        "Flower focus",
-        "BOOKCASE",
-        "The Key",
-        "Artefact",
-        "Sole Pepper",
-        "Cello",
-        "Gold Fish and lily flower",
-        "Hillside Houses",
-        "Houses",
-        "Houses with church",
-        "Church and Corner Store",
-        "Pedestrian crossing",
-        "Letterboxes of Manakau",
-        "Goldfish",
-        "House with Plans",
-        "Gabion Wall",
-        "Cottage at crossroads",
-        "Single shop",
-        "Apple",
-        "Timbuktu",
-        "The Rubiks Cube",
-        "Horowhenua",
-        "Nudescape",
-        "Seated Nude",
-        "Mediterranean Goddess",
-        "Rose",
-        "Pastel Rose",
-        "Sapphire",
-        "Schism",
-        "Her Red Shoes",
-        "Impressions of Flowers",
-        "Moody Houses",
-        "Cobalt blue glassware",
-        "Whare in The Hills",
-        "Untitled",
-        "Three Panel Peppers",
-        "Stained glass window",
-        "Small Stained Glass",
-        "The hall",
-        "Villa",
-        "West Coast",
-        "West coast triptych",
-        "Light Flare",
-        "Lady of the Lamp",
-        "Celtic Cross",
-        "Shrine",
-        "Stream",
-        "River Blue horizon",
-        "Castle on a loch",
-        "Scotland two",
-        "Clouds",
-        "Scottish loch 1",
-        "Scottish loch 3",
-        "Azure blue horizon",
-        "Focus on dots",
-        "Blue green dots",
-        "Field of dreams",
-        "Latest work"
-      ];
-
+  
+   // Titles for each painting (this could be from your backend or statically set here)
+const paintingTitles = [
+    "Blue Bowl Final",
+    "Dungeon",
+    "Tomb",
+    "Eight houses",
+    "Flower focus",
+    "BOOKCASE",
+    "The Key",
+    "Artefact",
+    "Sole Pepper",
+    "Cello",
+    "Gold Fish and lily flower",
+    "Hillside Houses",
+    "Houses",
+    "Houses with church",
+    "Church and Corner Store",
+    "Pedestrian crossing",
+    "Letterboxes of Manakau",
+    "Goldfish",
+    "House with Plans",
+    "Gabion Wall",
+    "Cottage at crossroads",
+    "Single shop",
+    "Apple",
+    "Timbuktu",
+    "The Rubiks Cube",
+    "Horowhenua",
+    "Nudescape",
+    "Seated Nude",
+    "Mediterranean Goddess",
+    "Rose",
+    "Pastel Rose",
+    "Sapphire",
+    "Schism",
+    "Her Red Shoes",
+    "Impressions of Flowers",
+    "Moody Houses",
+    "Cobalt blue glassware",
+    "Whare in The Hills",
+    "Untitled",
+    "Three Panel Peppers",
+    "Stained glass window",
+    "Small Stained Glass",
+    "The hall",
+    "Villa",
+    "West Coast",
+    "West coast triptych",
+    "Light Flare",
+    "Lady of the Lamp",
+    "Celtic Cross",
+    "Shrine",
+    "Stream",
+    "River Blue horizon",
+    "Castle on a loch",
+    "Scotland two",
+    "Clouds",
+    "Scottish loch 1",
+    "Scottish loch 3",
+    "Azure blue horizon",
+    "Focus on dots",
+    "Blue green dots",
+    "Field of dreams",
+    "Latest work"
+];
+  
       // Function to toggle the image popup
       function togglePopup() {
         const popup = document.getElementById('popup');
         popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'flex' : 'none';
       }
-
+  
       // Function to add popup functionality to images
       function addPopupFunctionality(imageSelector) {
         const images = document.querySelectorAll(imageSelector);
         const popupImage = document.getElementById('popup-image');
         const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
+  
         images.forEach(function (image, index) {
           image.addEventListener('click', function () {
             togglePopup();
@@ -449,46 +447,46 @@
           });
         });
       }
-
+  
       // Add popup functionality to images
       addPopupFunctionality('.column img');
-
+  
       // Function to navigate to the next image in the popup
       function nextImage() {
         const popupImage = document.getElementById('popup-image');
         let currentImageIndex = parseInt(popupImage.dataset.index);
         const images = document.querySelectorAll(popupImage.dataset.selector);
         const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
+  
         currentImageIndex = (currentImageIndex + 1) % images.length;
-
+  
         popupImage.src = images[currentImageIndex].src;
         popupImage.dataset.index = currentImageIndex;
         imgTitle.textContent = paintingTitles[currentImageIndex]; // Update title
       }
-
+  
       // Function to navigate to the previous image in the popup
       function prevImage() {
         const popupImage = document.getElementById('popup-image');
         let currentImageIndex = parseInt(popupImage.dataset.index);
         const images = document.querySelectorAll(popupImage.dataset.selector);
         const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
+  
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-
+  
         popupImage.src = images[currentImageIndex].src;
         popupImage.dataset.index = currentImageIndex;
         imgTitle.textContent = paintingTitles[currentImageIndex]; // Update title
       }
-
+  
       // Add event listeners for arrow clicks
       document.getElementById('prev-btn').addEventListener('click', prevImage);
       document.getElementById('next-btn').addEventListener('click', nextImage);
       document.getElementById('close-btn').addEventListener('click', togglePopup);
     });
   </script>
-
-
+  
+    
 
 
 </body>
