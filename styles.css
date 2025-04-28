@@ -18,21 +18,10 @@ body {
       transform: translateY(0);
     }
   }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
   .animate-fade-in {
     opacity: 0; /* Initially hidden */
-    animation: fadeIn 1s forwards; /* Apply animation */
+    animation: fadeIn 3s forwards; /* Apply animation */
   }
   
   .animate-slide-in {
