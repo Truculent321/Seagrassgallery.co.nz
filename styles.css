@@ -571,19 +571,76 @@ label {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url(/images/Kapiti_Blue_Horizon.JPG) center/cover no-repeat;
     color: #fff;
     text-align: center;
     display: flex;
     align-items: center;
 }
 
+.full-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 13s infinite;
+    overflow: hidden;
+}
+
+.full-background::before,
+.full-background::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  z-index: 1;
+}
+
+.full-background::before {
+  background-image: url('/images/Interior.jpg');
+  animation: fade1 15s infinite;
+}
+
+.full-background::after {
+  background-image: url('/images/Kapiti_Blue_Horizon.JPG');
+  animation: fade2 15s infinite;
+}
+
+@keyframes fade1 {
+  0%, 45%, 100% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+}
+
+@keyframes fade2 {
+  0%, 45% { opacity: 0; }
+  50%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+  
+  @keyframes slideshow {
+    0% {
+      background-image: url('/Truculent321-Seagrassgallery.co.nz-03fdea6//images/Interior.jpg');
+    }
+    33% {
+      background-image: url('/Truculent321-Seagrassgallery.co.nz-03fdea6//images/Kapiti\ Blue\ Horizon.JPG');
+  }
+}
+  
+
 .overlay {
     background: rgba(0, 0, 0, 0.2);
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 2; /* make sure overlay stays on top */
+    
 }
-
 .overlay h1 {
     font-size: 2.5rem;
 }
