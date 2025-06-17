@@ -44,18 +44,17 @@
       'cookie_domain': 'auto'
     });
   </script>
-  <script>
-    document.getElementById('hamburger').addEventListener('click', function () {
-      document.getElementById('nav-links').classList.toggle('active');
-    });
-  </script>
-
 </head>
 
 <body class="">
  <!-- Navbar -->
   <nav class="header">
     <div class="nav-wrapper">
+      <div class="hamburger" id="hamburger">
+  <span class="icon open">&#9776;</span> <!-- ☰ -->
+  <span class="icon close" style="display: none;">&times;</span> <!-- ✖ -->
+</div>
+
       <div id="logo-container">
         <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
       </div>
@@ -74,35 +73,42 @@
       <h3>Open Sunday's October through March 10am to 4pm.</h3>
       <button class="overlay-button" onclick="location.href='#contact';">Book an appointment</button>
       <button class="overlay-button" onclick="location.href='#Gallery-Title';">Explore the Gallery</button>
-      <button class="overlay-button" onclick="location.href='#Gallery-Title';">Request a commission</button>
+      <button class="overlay-button" onclick="location.href='#Gallery-Title';">About The gallery</button>
     </div>
   </div>
 
   <!-- About Section -->
-  <div class="section" id="about">
+<div class="colored-windows-container">
+  <section class="section colored-window" id="about">
     <h1>About The Gallery</h1>
-    <p>Seagrass Gallery is open every Sunday from October through March, 10am to 4pm</p>
-    <p>(essentially the warmer months), or by appointment. Around 30 works are on</p>
-    <p> display at any one time, all priced and available for purchase. At the moment</p>
-    <p>all paintings are the work of Grant Stevenson, but as things develop, other artists</p>
-    <p>will no doubt join the Gallery. Prices reflect the fact purchases are made</p>
-    <p>directly from the artist.</p>
-  </div>
-  <div class="section" id="abouttheartist">
+    <p>
+      Seagrass Gallery is open every Sunday from October through March, 10am to 4pm
+      (essentially the warmer months), or by appointment. Around 30 works are on display 
+      at any one time, all priced and available for purchase. At the moment all paintings 
+      are the work of Grant Stevenson, but as things develop, other artists will no doubt 
+      join the Gallery. Prices reflect the fact purchases are made directly from the artist.
+    </p>
+  </section>
+
+  <section class="section colored-window" id="abouttheartist">
     <h1>About the Artist</h1>
-    <p>I think I was always supposed to be a painter.</p>
-    <p>It's not until I retired from a busy life organizing</p>
-    <p>major public events in Wellington that I started to</p>
-    <p>take painting seriously.</p>
-    <p>You will see two basic styles of acrylic painting in</p>
-    <p>the way I work. Some paintings are rendered in a</p>
-    <p>tight, geometric, exact way showing an understanding</p>
-    <p>of objects and perspective, others are more</p>
-    <p>loosely created and happen more quickly.</p>
-    <p>I shall keep going at both, perhaps until the louder voice</p>
-    <p>drowns out the other.</p>
-    <p>Grant Stevenson QSM</p>
-  </div>
+    <p>
+      I think I was always supposed to be a painter.
+      It's not until I retired from a busy life organizing
+      major public events in Wellington that I started to
+      take painting seriously.
+    </p>
+    <p>
+      You will see two basic styles of acrylic painting in the way I work.
+      Some paintings are rendered in a tight, geometric, exact way showing 
+      an understanding of objects and perspective. Others are more
+      loosely created and happen more quickly. I shall keep going at 
+      both, perhaps until the louder voice drowns out the other.
+    </p>
+    <p><strong>Grant Stevenson QSM</strong></p>
+  </section>
+</div>
+
 
 
 
@@ -297,7 +303,7 @@
       <label for="email">Your email:</label>
       <input type="email" name="email" id="email" required>
       <label for="phone">Your Phone number:</label>
-      <input type="phone" name="phone" id="phone" required>
+      <input type="tel" name="phone" id="phone" required>
       <label for="message">Your message:</label>
       <textarea name="message" id="message" required></textarea>
       <button type="submit" class="button">Send Message</button>
@@ -337,18 +343,19 @@
     </div>
   </footer>
 
-  <!-- Image Popup -->
-  <div id="popup">
-    <div id="close-btn">CLOSE</div>
-    <div id="prev-btn" class="arrow-btn">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-    <img id="popup-image" class="#" src="" alt="Popup Image">
-    <div id="img-title" class="#">Popup Title</div> <!-- Title goes here -->
-    <div id="next-btn" class="arrow-btn">
-      <i class="fas fa-chevron-right"></i>
-    </div>
+   <!-- Image Popup -->
+<div id="popup">
+  <div id="close-btn">✖ CLOSE</div>
+  <div id="prev-btn" class="arrow-btn" aria-label="Previous Image">
+    <i class="fas fa-chevron-left"></i>
   </div>
+  <img id="popup-image" src="" alt="Popup Image">
+  <div id="img-title">Popup Title</div>
+  <div id="next-btn" class="arrow-btn" aria-label="Next Image">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>
+
 
 
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
@@ -524,9 +531,25 @@
     });
   </script>
 
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const openIcon = hamburger.querySelector('.open');
+  const closeIcon = hamburger.querySelector('.close');
 
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
 
-
+    // Toggle icons
+    if (navLinks.classList.contains('show')) {
+      openIcon.style.display = 'none';
+      closeIcon.style.display = 'inline';
+    } else {
+      openIcon.style.display = 'inline';
+      closeIcon.style.display = 'none';
+    }
+  });
+</script>
 </body>
 
 </html>
