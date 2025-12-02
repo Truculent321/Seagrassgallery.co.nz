@@ -575,7 +575,10 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-align: center;
 }
+
+
 
 .footer-logo img {
   height: 50px;
@@ -601,27 +604,6 @@ footer {
 
 .footer-nav a:hover,
 footer a:hover {
-  color: #3580C2;
-}
-
-/* Social Icons */
-.social-icons {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.2s ease-in-out;
-}
-
-.social-icons a:hover {
   color: #3580C2;
 }
 
