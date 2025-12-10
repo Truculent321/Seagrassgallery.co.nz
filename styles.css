@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background: #ffffff;
+    background: #f2f2f2;
 }
 
 a {
@@ -47,7 +47,7 @@ p {
 .overlay-button,
 button.showGallery {
     background-color: #3580C2;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 30px;
     color: #fff;
     padding: 12px 24px;
@@ -55,7 +55,7 @@ button.showGallery {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     display: inline-block;
     margin: 4px 2px;
 }
@@ -66,21 +66,20 @@ button.showGallery:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: #1f3e5a;
+    border-color: #000;
 }
 
-button.showGallery {
-    background-color: #4CAF50;
-}
 
 /* Layout Containers */
 .header-container,
 .location-container {
     display: flex;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 3rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    
 }
 
 .header-container .section,
@@ -89,6 +88,7 @@ button.showGallery {
     min-width: 200px;
     padding: 2rem;
     text-align: center;
+    
 }
 
 /* Nav Bar */
@@ -217,10 +217,24 @@ textarea {
   flex: 1 1 300px;              /* grow, shrink, basis width */
   max-width: 50%;             /* max width for each window */
   padding: 0.5rem;
-  border-radius: 30px;
+  border-radius: 15px;
   text-align: center;
   margin: 0 auto;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
 }
+
+/* Container style for About section header */
+#about-section-header {
+  background-color: #000;
+  color: #fff;
+  padding: 2px;
+  text-align: center;
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+}
+
 
 img {
     max-height: 100%;
