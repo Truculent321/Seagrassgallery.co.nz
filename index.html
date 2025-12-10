@@ -46,9 +46,9 @@
   </script>
 </head>
 
-<body class="">
+<body>
  <!-- Navbar -->
-  <nav class="header">
+  <nav role="navigation" class="header">
     <div class="nav-wrapper">
       <div class="hamburger" id="hamburger">
   <span class="icon open">&#9776;</span> <!-- ☰ -->
@@ -60,7 +60,7 @@
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about-section-header">About</a></li>
         <li><a href="#Gallery-Title">Gallery</a></li>
         <li><a href="#contact-form">Contact</a></li>
       </ul>
@@ -70,17 +70,21 @@
   <div class="full-background" id="home">
     <div class="overlay">
       <h1>Welcome to Seagrassgallery.co.nz</h1>
-      <h3>Open Sunday's October through March 10am to 4pm.</h3>
-      <button class="overlay-button" onclick="location.href='#Contact-header-container';">Book an appointment</button>
-      <button class="overlay-button" onclick="location.href='#Gallery-Title';">Explore the Gallery</button>
-      <button class="overlay-button" onclick="location.href='#about';">About The gallery</button>
+      <h2>Open Sunday's October through March 10am to 4pm in Otaki</h2>
+      <button class="overlay-button" onclick="location.href='#location';">Visit The Gallery</button>
+      <button class="overlay-button" onclick="location.href='#Gallery-Title';">Gallery Paintings</button>
+      <button class="overlay-button" onclick="location.href='#about-section-header';">About The gallery</button>
     </div>
   </div>
 
+
   <!-- About Section -->
+<div class="section" id="about-section-header">
+  <h1>About Seagrass Gallery</h1>
+</div>
 <div class="colored-windows-container">
-  <section class="section colored-window" id="about">
-    <h1>About The Gallery</h1>
+  <section class="section colored-window" id="">
+    <h2>The Gallery</h2>
     <p>
       Seagrass Gallery is open every Sunday from October through March, 10am to 4pm
       (essentially the warmer months), or by appointment. Around 30 works are on display 
@@ -91,7 +95,7 @@
   </section>
 
   <section class="section colored-window" id="abouttheartist">
-    <h1>About the Artist</h1>
+    <h2>The Artist</h2>
     <p>
       I think I was always supposed to be a painter.
       It's not until I retired from a busy life organizing
@@ -121,112 +125,114 @@
   <div class="container Gallery">
     <div class="row animate-fade-in">
       <div class="column">
-        <img src="/images/Blue Bowl Final_cropped.jpg" alt="Blue bowl" style="width:100%" data-title="The Blue Bowl"
+        <img src="/images/Blue Bowl Final_cropped.jpg" alt="The Blue bowl" style="width:100%" data-title="The Blue Bowl"
           data-description="1200 x 400 SOLD">
         <img src="/images/Dungeon_cropped.jpg" alt="Dungeon" style="width:100%" data-title="The Dungeon"
           data-description="250 x 350 SOLD">
-        <img src="/images/Tomb_cropped.jpg" style="width:100%" data-title="Tomb" data-description="300 x 400 SOLD">
-        <img src="/images/Eight_houses_cropped.jpg" style="width:100%" data-title="Eight Houses"
+        <img src="/images/Tomb_cropped.jpg" alt="tomb" style="width:100%" data-title="Tomb" data-description="300 x 400 SOLD">
+        <img src="/images/Eight_houses_cropped.jpg" alt="Eight Houses" style="width:100%" data-title="Eight Houses"
           data-description="760 x 760 $850">
-        <img src="/images/Flower_focus_cropped.jpg" style="width:100%" data-title="Flower Focus"
+        <img src="/images/Flower_focus_cropped.jpg" alt="Flower Focus" style="width:100%" data-title="Flower Focus"
           data-description="410 x 700 $695">
-        <img src="/images/BOOKCASE_cropped.jpg" style="width:100%" data-title="The Case for Books"
+        <img src="/images/BOOKCASE_cropped.jpg" alt="The Case For Books" style="width:100%" data-title="The Case for Books"
           data-description="800 x 400 SOLD">
-        <img src="/images/The_Key.jpg" style="width:100%" data-title="The Key" data-description="300 x 300 $195">
-        <img src="/images/Artefact.jpg" style="width:100%" data-title="" data-description="">
-        <img src="/images/Sole Pepper.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/Cello.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/IMG_0043.jpg" style="width:100%" data-title="Stained Glass Window" 
+        <img src="/images/The_Key.jpg" alt="The Key" style="width:100%" data-title="The Key" 
+        data-description="300 x 300 $195">
+        <img src="/images/Artefact.jpg" alt="Artefact" style="width:100%" data-title="Artefact" 
         data-description="">
-        <img src="/images/The Rubiks Cube.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
+        <img src="/images/Sole Pepper.JPG" alt="Sole Pepper" style="width:100%" data-title="Sole Pepper" 
+        data-description="Sole pepper">
+        <img src="/images/Cello.JPG" alt="Cello" style="width:100%" data-title="Stained Glass Window" data-description="Cello">
+        <img src="/images/IMG_0043.jpg" alt="Birch Bridge" style="width:100%" data-title="Birch Bridge" 
+        data-description="">
+        <img src="/images/The Rubiks Cube.JPG" alt="The Rubiks Cube" style="width:100%" data-title="Stained Glass Window" data-description="The Rubkiks Cube">
       </div>
 
       <div class="column">
-        <img src="/images/IMG_0010.jpg" alt="Blue bowl" style="width:100%" data-title="Stained II"
-          data-description="1200 x 400 SOLD">
-        <img src="/images/GoldFishandlilyflower_cropped.jpg.jpg" style="width:100%" data-title="Goldfish and Lily"
+        <img src="/images/IMG_0010.jpg" alt="Main Window" style="width:100%" data-title="Main Window"
+          data-description="Main window">
+        <img src="/images/GoldFishandlilyflower_cropped.jpg.jpg" alt="Goldfish & Lily Flower" style="width:100%" data-title="Goldfish and Lily"
           data-description="365 x 625 $550">
-        <img src="/images/Hillsidehouses_cropped.jpg.jpg" style="width:100%" data-title="Hillside Houses"
+        <img src="/images/Hillsidehouses_cropped.jpg.jpg" alt="Hillside Houses" style="width:100%" data-title="Hillside Houses"
           data-description="760 x 1144 SOLD">
-        <img src="/images/Houses_cropped.jpg" style="width:100%" data-title="Houses" data-description="300 x 450 SOLD">
-        <img src="/images/Houseswithchurch_cropped.jpg.jpg" style="width:100%" data-title="Houses with Church"
+        <img src="/images/Houses_cropped.jpg" alt="Houses" style="width:100%" data-title="Houses" data-description="300 x 450 SOLD">
+        <img src="/images/Houseswithchurch_cropped.jpg.jpg" alt="Houses with Church" style="width:50%" data-title="Houses with Church"
           data-description="460 x 600 SOLD">
-        <img src="/images/Church and Corner Store.jpg" style="width:100%" data-title="Church and Corner Store"
+        <img src="/images/Church and Corner Store.jpg" alt="Church & Corner Store" style="width:100%" data-title="Church and Corner Store"
           data-description="250 x 200 $195">
-        <img src="/images/Pedestrian_crossing_cropped" style="width:100%" data-title="Pedestrian Crossing"
+        <img src="/images/Pedestrian_crossing_cropped" alt="Pedestrian Crossing" style="width:100%" data-title="Pedestrian Crossing"
           data-description="1000 x 500 $650">
-        <img src="/images/Letterboxes_of_Manakau_cropped.jpg" style="width:100%" data-title="Letterboxes of Manakau"
+        <img src="/images/Letterboxes_of_Manakau_cropped.jpg" alt="Letterboxes of Manakau" style="width:100%" data-title="Letterboxes of Manakau"
           data-description="380 x 760 SOLD">
-        <img src="/images/Goldfish_cropped.jpg" style="width:100%" data-title="Goldfish"
+        <img src="/images/Goldfish_cropped.jpg" alt="Goldfish" style="width:100%" data-title="Goldfish"
           data-description="570 x 410 $550">
-        <img src="/images/House_with_Plans.jpg" style="width:100%" data-title="House Plans"
+        <img src="/images/House_with_Plans.jpg" alt="House with Plans" style="width:100%" data-title="House with Plans"
           data-description="500 x 750 SOLD">
-        <img src="/images/Gabion_Wall.jpg" style="width:100%" data-title="The Stone Wall"
+        <img src="/images/Gabion_Wall.jpg" alt="The Stone Wall" style="width:100%" data-title="The Stone Wall"
           data-description="900 x 1500 $980">
-        <img src="/images/Cottageatcrossroads.jpg" style="width:100%" data-title="Cottage at the Crossroads"
+        <img src="/images/Cottageatcrossroads.jpg" alt="Cottage at Crossroads" style="width:100%" data-title="Cottage at the Crossroads"
           data-description="250 x 200 $95">
-        <img src="/images/Single shop.JPG" style="width:100%" data-title="Single Shop" data-description="">
-        <img src="/images/Apple.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/Timbuktu.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
+        <img src="/images/Single shop.JPG" alt="Single Shop" style="width:100%" data-title="Single Shop" data-description="">
+        <img src="/images/Apple.JPG" alt="Apple" style="width:100%" data-title="Stained Glass Window" data-description="">
+        <img src="/images/Timbuktu.JPG" alt="Timbuktu" style="width:100%" data-title="Stained Glass Window" data-description="">
       </div>
 
       <div class="column">
-        <img src="/images/Horowhenua_cropped.jpg" style="width:100%" data-title="Horowhenua"
+        <img src="/images/Horowhenua_cropped.jpg" alt="Horowhenua" style="width:100%" data-title="Horowhenua"
           data-description="760 x 760 $850">
-        <img src="/images/Nudescape_cropped.jpg" style="width:100%" data-title="Nudescape"
+        <img src="/images/Nudescape_cropped.jpg" alt="Nudescape" style="width:100%" data-title="Nudescape"
           data-description="300 x 1200 $500">
-        <img src="/images/Seated Nude.JPG" style="width:100%;" data-title="" data-description="">
-        <img src="/images/Mediterranean Goddess unframed.jpg" style="width:100%" data-title="Mediterranean Goddess"
+        <img src="/images/Seated Nude.JPG" alt="Seated Nude" style="width:100%;" data-title="" data-description="">
+        <img src="/images/Mediterranean Goddess unframed.jpg" alt="Mediterranean Godess" style="width:100%" data-title="Mediterranean Goddess"
           data-description="630 x 480 $450">
-        <img src="/images/Rose_cropped.jpg" style="width:100%" data-title="Rose" data-description="300 x 300 SOLD">
-        <img src="/images/Pastel_Rose.jpg" style="width:100%" data-title="Pastel Rose"
+        <img src="/images/Rose_cropped.jpg" alt="Rose" style="width:100%" data-title="Rose" data-description="300 x 300 SOLD">
+        <img src="/images/Pastel_Rose.jpg" alt="Pastel Rose" style="width:100%" data-title="Pastel Rose"
           data-description="250 x 160 SOLD">
-        <img src="/images/Sapphire_cropped.jpg" style="width:100%" data-title="Sapphire"
+        <img src="/images/Sapphire_cropped.jpg" alt="Sapphire" style="width:100%" data-title="Sapphire"
           data-description="610 x 610 $595">
-        <img src="/images/Schism_cropped.jpg" style="width:100%" data-title="Schism" data-description="610 x 610 $550">
-        <img src="/images/Her_Red_Shoes.jpg" style="width:100%" data-title="Her Red Shoes"
+        <img src="/images/Schism_cropped.jpg" alt="Schism" style="width:100%" data-title="Schism" data-description="610 x 610 $550">
+        <img src="/images/Her_Red_Shoes.jpg" alt="Her Red Shoes" style="width:100%" data-title="Her Red Shoes"
           data-description="300 x 400 SOLD">
-        <img src="/images/Impressions_of_Flowers.jpg" style="width:100%" data-title="Impressions of Flowers"
+        <img src="/images/Impressions_of_Flowers.jpg" alt="Impressions of Flowers" style="width:100%" data-title="Impressions of Flowers"
           data-description="610 x 610 $495">
-        <img src="/images/Moody_Houses.jpg" style="width:100%" data-title="Sunset Houses"
+        <img src="/images/Moody_Houses.jpg" alt="Moody Houses" style="width:100%" data-title="Sunset Houses"
           data-description="500 x 400 $400">
-        <img src="/images/Cobaltblueglassware.jpg" style="width:100%" data-title="Cobalt Blue Glassware"
+        <img src="/images/Cobaltblueglassware.jpg" alt="Cobalt Blue Glassware" style="width:100%" data-title="Cobalt Blue Glassware"
           data-description="760 x 760 SOLD">
-        <img src="/images/Whare in The Hills.JPG" style="width:100%" data-title="Stained Glass Window"
+        <img src="/images/Whare in The Hills.JPG" alt="Whare in The Hills" style="width:100%" data-title="Whare in The Hills"
           data-description="">
-        <img src="/images/IMG_E1677.JPG" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/Three Panel Peppers.JPG" style="width:100%" data-title="Stained Glass Window"
+        <img src="/images/IMG_E1677.JPG" alt="Untitled Painting" style="width:100%" data-title="Stained Glass Window" data-description="">
+        <img src="/images/Three Panel Peppers.JPG" alt="Three Panel Peppers" style="width:100%" data-title="Stained Glass Window"
           data-description="">
-        <img src="/images/IMG_0016.jpg" style="width:100%" data-title="Untitled"
+        <img src="/images/IMG_0016.jpg" alt="Untitled painting" style="width:100%" data-title="Untitled"
         data-description="">
-        <img src="/images/The Entry.jpg" style="width:100%" data-title="The Entry"
+        <img src="/images/The Entry.jpg" alt="The Entry" style="width:100%" data-title="The Entry"
         data-description="">
         
 
       </div>
 
       <div class="column">
-        <img src="/images/Stainedglasswindow_cropped.jpg" style="width:100%" data-title="Stained Glass Window"
+        <img src="/images/Stainedglasswindow_cropped.jpg" alt="Stained Glass Window" style="width:100%" data-title="Stained Glass Window"
           data-description="1500 x 400 SOLD">
-        <img src="/images/Small Stained Glass.JPG" style="width:100%" data-title="Stained Glass Window"
+        <img src="/images/Small Stained Glass.JPG" alt="Small Stained Glass" style="width:100%" data-title="Small Stained Glass"
           data-description="">
-        <img src="/images/Thehall_cropped.jpg" style="width:100%" data-title="The Hall"
+        <img src="/images/Thehall_cropped.jpg" alt="The Hall" style="width:100%" data-title="The Hall"
           data-description="500 x 400 SOLD">
-        <img src="/images/Villa_cropped.jpg" style="width:100%" data-title="Villa" data-description="400 x 550 SOLD">
-        <img src="/images/West_Coast.jpg" style="width:100%" data-title="West Coast" data-description="450 x 900 $450">
-        <img src="/images/Westcoasttriptych_cropped.jpg" style="width:100%" data-title="West Coast II"
+        <img src="/images/Villa_cropped.jpg" alt="Villa" style="width:100%" data-title="Villa" data-description="400 x 550 SOLD">
+        <img src="/images/Westcoasttriptych_cropped.jpg" alt="West Coast II" style="width:100%" data-title="West Coast II"
           data-description="500 x 1500 SOLD">
-        <img src="/images/Light_Flare.jpg" style="width:100%" data-title="Light Flare"
+        <img src="/images/Light_Flare.jpg" alt="Light Flare" style="width:100%" data-title="Light Flare"
           data-description="500 x 750 $475">
-        <img src="/images/Lady_of_the_Lamp.jpg" style="width:100%" data-title="Lady of the Lamp"
+        <img src="/images/Lady_of_the_Lamp.jpg" alt="Lady of The Lamp" style="width:100%" data-title="Lady of The Lamp"
           data-description="760 x 380 SOLD">
-        <img src="/images/Celtic_Cross.jpg" style="width:100%" data-title="Celtic Cross - Stained Glass"
+        <img src="/images/Celtic_Cross.jpg" alt="Celtic Cross" style="width:100%" data-title="Celtic Cross - Stained Glass"
           data-description="1050 x 550 $950">
-        <img src="/images/Shrine.JPG" style="width:100%" data-title="Shrine" 
+        <img src="/images/Shrine.JPG" alt="Shrine" style="width:100%" data-title="Shrine" 
         data-description="">
-        <img src="/images/IMG_0057.jpg" style="width:100%" data-title="Luggage" 
+        <img src="/images/IMG_0057.jpg" alt="Luggage" style="width:100%" data-title="Luggage" 
         data-description="">
-        <img src="/images/Dusk at the store.jpg" style="width:100%" data-title="Dusk at the Store" 
+        <img src="/images/Dusk at the store.jpg" alt="Dusk at The Store" style="width:100%" data-title="Dusk at The Store" 
         data-description="">
         
 
@@ -243,31 +249,31 @@
   <div class="container Blue-horizon">
     <div class="row animate-fade-in">
       <div class="column">
-        <img src="/images/Stream.jpg" style="width:100%">
+        <img src="/images/Stream.jpg" alt="Stream" style="width:100%">
       </div>
 
       <div class="column">
-        <img src="/images/River Blue horizon.jpg" style="width:100%" data-title="River: Blue Horizon"
+        <img src="/images/River Blue horizon.jpg" alt="River" style="width:100%" data-title="River: Blue Horizon"
           data-description="1000 x 1500 $1450">
-        <img src="/images/Castle_on_a_lotch_cropped.jpg" style="width:100%" data-title="Castle on the Loch"
+        <img src="/images/Castle_on_a_lotch_cropped.jpg" alt="Castle on The Loch" style="width:100%" data-title="Castle on the Loch"
           data-description="485 x 630 $800">
-        <img src="/images/Scotland two.jpg" style="width:100%" data-title="Scottish Loch II"
+        <img src="/images/Scotland two.jpg" alt="Scottish Loch II" style="width:100%" data-title="Scottish Loch II"
           data-description="320 x 460 $680">
       </div>
 
       <div class="column">
-        <img src="/images/Clouds_cropped.jpg" style="width:100%" data-title="Cloud Formation"
+        <img src="/images/Clouds_cropped.jpg" alt="Cloud Formation" style="width:100%" data-title="Cloud Formation"
           data-description="1000 x 500 $1250">
-          <img src="/images/IMG_0081.jpg" style="width:100%" data-title="Cloud Formation"
+          <img src="/images/IMG_0081.jpg" alt="Untitled Painting" style="width:100%" data-title=""
           data-description="1000 x 500 $1250">
-        <img src="/images/Scottish loch 1.jpg" style="width:100%" data-title="Scottish Loch I"
+        <img src="/images/Scottish loch 1.jpg" alt="Scottish Loch I" style="width:100%" data-title="Scottish Loch I"
           data-description="320 x 460 SOLD">
       </div>
 
       <div class="column">
-        <img src="/images/Azure blue horizon.jpg" style="width:100%" data-title="Horizon Azure Blue"
+        <img src="/images/Azure blue horizon.jpg" alt="Horizon Azure Blue" style="width:100%" data-title="Horizon Azure Blue"
           data-description="900 x 450 $550">
-          <img src="/images/Scottish loch 3.jpg" style="width:100%" data-title="Scottish Loch III"
+          <img src="/images/Scottish loch 3.jpg" alt="Scottish Loch III" style="width:100%" data-title="Scottish Loch III"
           data-description="320 x 460 SOLD">
       </div>
     </div>
@@ -281,21 +287,21 @@
   <div class="container Dot-series">
     <div class="row animate-fade-in">
       <div class="column">
-        <img src="/images/Focusondots_cropped.jpg" style="width:100%" data-title="Focus on Dots"
+        <img src="/images/Focusondots_cropped.jpg" alt="Dots Focus" style="width:100%" data-title="Dots Focus"
           data-description="460 x 310 $495">
       </div>
 
       <div class="column">
-        <img src="/images/Bluegreendots_cropped.jpg" style="width:100%" data-title="Dots: Blue Green"
+        <img src="/images/Bluegreendots_cropped.jpg" alt="Blue Green Dots"style="width:100%" data-title="Blue Green Dots"
           data-description="310 x 460 $395">
       </div>
 
       <div class="column">
-        <img src="/images/Field_of_dreams.jpg" style="width:100%" data-title="Dot Dreaming" data-description="">
+        <img src="/images/Field_of_dreams.jpg" alt="Field of Dreams" style="width:100%" data-title="Field of Dreams" data-description="Field of Dreams">
       </div>
 
       <div class="column">
-        <img src="/images/Latestwork_cropped.jpg" style="width:100%" data-title="Dot Landscape"
+        <img src="/images/Latestwork_cropped.jpg" alt="Dots Lanndscape" style="width:100%" data-title="Dots Landscape"
           data-description="470 x 600 $675">
       </div>
     </div>
@@ -311,27 +317,31 @@
   <p>For a detailed message such as a commission request please fill out the form below.</p>
 </div>
 </div>
-<div class="location-container">
+<div class="location-container" id="location">
  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2489963845132!2d175.11737601234128!3d-40.7345462712709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d409193f0d43cb5%3A0x2873deb15f6d1391!2sSeagrass%20Gallery%2C!5e0!3m2!1sen!2snz!4v1700896080063!5m2!1sen!2snz"
       width="50%" height="367"style= "border: none"  loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
 
 <!-- Contact Form -->
+ <section class="section colored-window">
   <div class="section" id="contact-form">
     <form action="https://formspree.io/f/xrgnenro" method="POST">
       <label for="email">Your email:</label>
       <input type="email" name="email" id="email" required>
       <label for="phone">Your Phone number:</label>
-      <input type="tel" name="phone" id="phone" required>
+      <input type="tel" name="Mobile" id="phone" required>
       <label for="message">Your message:</label>
       <textarea name="message" id="message" required></textarea>
       <button type="submit" class="button">Send Message</button>
-    <a href="tel:0272314643" class="button" id="phone">Call +64 27 231 4643 </a>
+      <a href="tel:0272314643" class="button" id="phone">Call Now</a>
     </form>
   </div>
 </div>
+</section>
+
   <!-- Footer Section -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-wrapper">
       <div class="footer-logo">
         <img src="/images/seagrass_gallery_2_Street sign Cropped(1).png" alt="Seagrassgallery-Logo">
@@ -341,7 +351,7 @@
         <nav class="footer">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about-section-header">About</a></li>
             <li><a href="#Gallery-Title">Gallery</a></li>
             <li><a href="#contact-form">Contact</a></li>
           </ul>
@@ -349,7 +359,7 @@
       </div>
 
       <div class="links">
-        <p>&copy; 2024 Seagrassgallery. All rights reserved.</p>
+        <p>&copy; 2026 Seagrassgallery. All rights reserved.</p>
         <div class="links-container">
         <a href="Terms.html">Terms of use</a>
         <a href="Privacy.html">Privacy policy</a>
@@ -357,6 +367,7 @@
       </div>
     </div>
   </footer>
+  
 
    <!-- Image Popup -->
 <div id="popup">
@@ -489,7 +500,7 @@
         "Focus on dots",
         "Blue green dots",
         "Field of dreams",
-        "Latest work"
+        "Dots Landscape"
       ];
 
       // Function to toggle the image popup
@@ -575,4 +586,3 @@
 </body>
 
 </html>
-
