@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://seagrassgallery.co.nz" />
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 
   <!-- Add Open Graph (OG) meta tags for social media sharing -->
   <meta property="og:type" content="website" />
@@ -34,311 +35,325 @@
 
   <!-- Google tag (gtag.js) for tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75NG7PPSE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    // Configure GA with cookie_domain set to 'auto' or specify your domain if needed
-    gtag('config', 'G-K75NG7PPSE', {
-      'cookie_domain': 'auto'
-    });
-  </script>
 </head>
 
 <body>
- <!-- Navbar -->
+  <!-- Navbar -->
   <nav role="navigation" class="header">
     <div class="nav-wrapper">
       <div class="hamburger" id="hamburger">
-  <span class="icon open">&#9776;</span> <!-- ☰ -->
-  <span class="icon close" style="display: none;">&times;</span> <!-- ✖ -->
-</div>
+        <span class="icon open">&#9776;</span> <!-- ☰ -->
+        <span class="icon close" style="display: none;">&times;</span> <!-- ✖ -->
+      </div>
 
       <div id="logo-container">
         <a href="index.html"><img class="logo" src="/images/Logo.png" alt="Seagrassgallery-Logo"></a>
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-section-header">About</a></li>
-        <li><a href="#Gallery-Title">Gallery</a></li>
-        <li><a href="#contact-form">Contact</a></li>
+        <li><a href="/home" onclick="route(event)">Home</a></li>
+        <li><a href="/about" onclick="route(event)">About</a></li>
+        <li><a href="/gallery" onclick="route(event)">Gallery</a></li>
+        <li><a href="/contact" onclick="route(event)">Contact</a></li>
+
+
+        <!-- REAL pages -->
+        <li><a href="Terms.html">Terms</a></li>
+        <li><a href="Privacy.html">Privacy</a></li>
+
       </ul>
     </div>
   </nav>
-
-  <div class="full-background" id="home">
-    <div class="overlay">
-      <h1>Welcome to Seagrassgallery.co.nz</h1>
-      <h2>Open Sunday's October through March 10am to 4pm in Otaki</h2>
-      <button class="overlay-button" onclick="location.href='#location';">Visit The Gallery</button>
-      <button class="overlay-button" onclick="location.href='#Gallery-Title';">Gallery Paintings</button>
-      <button class="overlay-button" onclick="location.href='#about-section-header';">About The gallery</button>
-    </div>
-  </div>
-
-
-  <!-- About Section -->
-<div class="section" id="about-section-header">
-  <h1>About Seagrass Gallery</h1>
-</div>
-<div class="colored-windows-container">
-  <section class="section colored-window" id="">
-    <h2>The Gallery</h2>
-    <p>
-      Seagrass Gallery is open every Sunday from October through March, 10am to 4pm
-      (essentially the warmer months), or by appointment. Around 30 works are on display 
-      at any one time, all priced and available for purchase. At the moment all paintings 
-      are the work of Grant Stevenson, but as things develop, other artists will no doubt 
-      join the Gallery. Prices reflect the fact purchases are made directly from the artist.
-    </p>
-  </section>
-
-  <section class="section colored-window" id="abouttheartist">
-    <h2>The Artist</h2>
-    <p>
-      I think I was always supposed to be a painter.
-      It's not until I retired from a busy life organizing
-      major public events in Wellington that I started to
-      take painting seriously.
-    </p>
-    <p>
-      You will see two basic styles of acrylic painting in the way I work.
-      Some paintings are rendered in a tight, geometric, exact way showing 
-      an understanding of objects and perspective. Others are more
-      loosely created and happen more quickly. I shall keep going at 
-      both, perhaps until the louder voice drowns out the other.
-    </p>
-    <p><strong>Grant Stevenson QSM</strong></p>
-  </section>
-</div>
-
-
-
-
-
-  <div class="section" id="Gallery-Title">
-    <h1>Gallery Paintings</h1>
-    <button id="toggleGallery" class="button">Toggle</button>
-  </div>
-  <!-- Photo Grid -->
-  <div class="container Gallery">
-    <div class="row animate-fade-in">
-      <div class="column">
-        <img src="/images/Blue Bowl Final_cropped.jpg" alt="The Blue bowl" style="width:100%" data-title="The Blue Bowl"
-          data-description="1200 x 400 SOLD">
-        <img src="/images/Dungeon_cropped.jpg" alt="Dungeon" style="width:100%" data-title="The Dungeon"
-          data-description="250 x 350 SOLD">
-        <img src="/images/Tomb_cropped.jpg" alt="tomb" style="width:100%" data-title="Tomb" data-description="300 x 400 SOLD">
-        <img src="/images/Eight_houses_cropped.jpg" alt="Eight Houses" style="width:100%" data-title="Eight Houses"
-          data-description="760 x 760 $850">
-        <img src="/images/Flower_focus_cropped.jpg" alt="Flower Focus" style="width:100%" data-title="Flower Focus"
-          data-description="410 x 700 $695">
-        <img src="/images/BOOKCASE_cropped.jpg" alt="The Case For Books" style="width:100%" data-title="The Case for Books"
-          data-description="800 x 400 SOLD">
-        <img src="/images/The_Key.jpg" alt="The Key" style="width:100%" data-title="The Key" 
-        data-description="300 x 300 $195">
-        <img src="/images/Artefact.jpg" alt="Artefact" style="width:100%" data-title="Artefact" 
-        data-description="">
-        <img src="/images/Sole Pepper.JPG" alt="Sole Pepper" style="width:100%" data-title="Sole Pepper" 
-        data-description="Sole pepper">
-        <img src="/images/Cello.JPG" alt="Cello" style="width:100%" data-title="Stained Glass Window" data-description="Cello">
-        <img src="/images/IMG_0043.jpg" alt="Birch Bridge" style="width:100%" data-title="Birch Bridge" 
-        data-description="">
-        <img src="/images/The Rubiks Cube.JPG" alt="The Rubiks Cube" style="width:100%" data-title="Stained Glass Window" data-description="The Rubkiks Cube">
-      </div>
-
-      <div class="column">
-        <img src="/images/IMG_0010.jpg" alt="Main Window" style="width:100%" data-title="Main Window"
-          data-description="Main window">
-        <img src="/images/GoldFishandlilyflower_cropped.jpg.jpg" alt="Goldfish & Lily Flower" style="width:100%" data-title="Goldfish and Lily"
-          data-description="365 x 625 $550">
-        <img src="/images/Hillsidehouses_cropped.jpg.jpg" alt="Hillside Houses" style="width:100%" data-title="Hillside Houses"
-          data-description="760 x 1144 SOLD">
-        <img src="/images/Houses_cropped.jpg" alt="Houses" style="width:100%" data-title="Houses" data-description="300 x 450 SOLD">
-        <img src="/images/Houseswithchurch_cropped.jpg.jpg" alt="Houses with Church" style="width:50%" data-title="Houses with Church"
-          data-description="460 x 600 SOLD">
-        <img src="/images/Church and Corner Store.jpg" alt="Church & Corner Store" style="width:100%" data-title="Church and Corner Store"
-          data-description="250 x 200 $195">
-        <img src="/images/Pedestrian_crossing_cropped" alt="Pedestrian Crossing" style="width:100%" data-title="Pedestrian Crossing"
-          data-description="1000 x 500 $650">
-        <img src="/images/Letterboxes_of_Manakau_cropped.jpg" alt="Letterboxes of Manakau" style="width:100%" data-title="Letterboxes of Manakau"
-          data-description="380 x 760 SOLD">
-        <img src="/images/Goldfish_cropped.jpg" alt="Goldfish" style="width:100%" data-title="Goldfish"
-          data-description="570 x 410 $550">
-        <img src="/images/House_with_Plans.jpg" alt="House with Plans" style="width:100%" data-title="House with Plans"
-          data-description="500 x 750 SOLD">
-        <img src="/images/Gabion_Wall.jpg" alt="The Stone Wall" style="width:100%" data-title="The Stone Wall"
-          data-description="900 x 1500 $980">
-        <img src="/images/Cottageatcrossroads.jpg" alt="Cottage at Crossroads" style="width:100%" data-title="Cottage at the Crossroads"
-          data-description="250 x 200 $95">
-        <img src="/images/Single shop.JPG" alt="Single Shop" style="width:100%" data-title="Single Shop" data-description="">
-        <img src="/images/Apple.JPG" alt="Apple" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/Timbuktu.JPG" alt="Timbuktu" style="width:100%" data-title="Stained Glass Window" data-description="">
-      </div>
-
-      <div class="column">
-        <img src="/images/Horowhenua_cropped.jpg" alt="Horowhenua" style="width:100%" data-title="Horowhenua"
-          data-description="760 x 760 $850">
-        <img src="/images/Nudescape_cropped.jpg" alt="Nudescape" style="width:100%" data-title="Nudescape"
-          data-description="300 x 1200 $500">
-        <img src="/images/Seated Nude.JPG" alt="Seated Nude" style="width:100%;" data-title="" data-description="">
-        <img src="/images/Mediterranean Goddess unframed.jpg" alt="Mediterranean Godess" style="width:100%" data-title="Mediterranean Goddess"
-          data-description="630 x 480 $450">
-        <img src="/images/Rose_cropped.jpg" alt="Rose" style="width:100%" data-title="Rose" data-description="300 x 300 SOLD">
-        <img src="/images/Pastel_Rose.jpg" alt="Pastel Rose" style="width:100%" data-title="Pastel Rose"
-          data-description="250 x 160 SOLD">
-        <img src="/images/Sapphire_cropped.jpg" alt="Sapphire" style="width:100%" data-title="Sapphire"
-          data-description="610 x 610 $595">
-        <img src="/images/Schism_cropped.jpg" alt="Schism" style="width:100%" data-title="Schism" data-description="610 x 610 $550">
-        <img src="/images/Her_Red_Shoes.jpg" alt="Her Red Shoes" style="width:100%" data-title="Her Red Shoes"
-          data-description="300 x 400 SOLD">
-        <img src="/images/Impressions_of_Flowers.jpg" alt="Impressions of Flowers" style="width:100%" data-title="Impressions of Flowers"
-          data-description="610 x 610 $495">
-        <img src="/images/Moody_Houses.jpg" alt="Moody Houses" style="width:100%" data-title="Sunset Houses"
-          data-description="500 x 400 $400">
-        <img src="/images/Cobaltblueglassware.jpg" alt="Cobalt Blue Glassware" style="width:100%" data-title="Cobalt Blue Glassware"
-          data-description="760 x 760 SOLD">
-        <img src="/images/Whare in The Hills.JPG" alt="Whare in The Hills" style="width:100%" data-title="Whare in The Hills"
-          data-description="">
-        <img src="/images/IMG_E1677.JPG" alt="Untitled Painting" style="width:100%" data-title="Stained Glass Window" data-description="">
-        <img src="/images/Three Panel Peppers.JPG" alt="Three Panel Peppers" style="width:100%" data-title="Stained Glass Window"
-          data-description="">
-        <img src="/images/IMG_0016.jpg" alt="Untitled painting" style="width:100%" data-title="Untitled"
-        data-description="">
-        <img src="/images/The Entry.jpg" alt="The Entry" style="width:100%" data-title="The Entry"
-        data-description="">
-        
-
-      </div>
-
-      <div class="column">
-        <img src="/images/Stainedglasswindow_cropped.jpg" alt="Stained Glass Window" style="width:100%" data-title="Stained Glass Window"
-          data-description="1500 x 400 SOLD">
-        <img src="/images/Small Stained Glass.JPG" alt="Small Stained Glass" style="width:100%" data-title="Small Stained Glass"
-          data-description="">
-        <img src="/images/Thehall_cropped.jpg" alt="The Hall" style="width:100%" data-title="The Hall"
-          data-description="500 x 400 SOLD">
-        <img src="/images/Villa_cropped.jpg" alt="Villa" style="width:100%" data-title="Villa" data-description="400 x 550 SOLD">
-        <img src="/images/Westcoasttriptych_cropped.jpg" alt="West Coast II" style="width:100%" data-title="West Coast II"
-          data-description="500 x 1500 SOLD">
-        <img src="/images/Light_Flare.jpg" alt="Light Flare" style="width:100%" data-title="Light Flare"
-          data-description="500 x 750 $475">
-        <img src="/images/Lady_of_the_Lamp.jpg" alt="Lady of The Lamp" style="width:100%" data-title="Lady of The Lamp"
-          data-description="760 x 380 SOLD">
-        <img src="/images/Celtic_Cross.jpg" alt="Celtic Cross" style="width:100%" data-title="Celtic Cross - Stained Glass"
-          data-description="1050 x 550 $950">
-        <img src="/images/Shrine.JPG" alt="Shrine" style="width:100%" data-title="Shrine" 
-        data-description="">
-        <img src="/images/IMG_0057.jpg" alt="Luggage" style="width:100%" data-title="Luggage" 
-        data-description="">
-        <img src="/images/Dusk at the store.jpg" alt="Dusk at The Store" style="width:100%" data-title="Dusk at The Store" 
-        data-description="">
-        
-
-
+  <section id="home">
+    <div class="full-background" id="home">
+      <div class="overlay">
+        <h1>Welcome to Seagrassgallery.co.nz</h1>
+        <h2>Open Sunday's October through March 10am to 4pm in Otaki</h2>
+        <button class="overlay-button" onclick="location.href='#location';">Visit The Gallery</button>
+        <button class="overlay-button" onclick="location.href='#Gallery-Title';">Gallery Paintings</button>
+        <button class="overlay-button" onclick="location.href='#about-section-header';">About The gallery</button>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="Blue-Horizon-Title">
-    <h1>Blue Horizon Series</h1>
-    <button id="togglebluehorizon" class="button">Toggle</button>
-  </div>
-  <!-- Photo Grid -->
-  <div class="container Blue-horizon">
-    <div class="row animate-fade-in">
-      <div class="column">
-        <img src="/images/Stream.jpg" alt="Stream" style="width:100%">
+  <section id="about">
+    <!-- About Section -->
+    <div class="section" id="about-section-header">
+      <h1>About Seagrass Gallery</h1>
+    </div>
+    <div class="colored-windows-container">
+      <section class="section colored-window" id="">
+        <h2>The Gallery</h2>
+        <p>
+          Seagrass Gallery is open every Sunday from October through March, 10am to 4pm
+          (essentially the warmer months), or by appointment. Around 30 works are on display
+          at any one time, all priced and available for purchase. At the moment all paintings
+          are the work of Grant Stevenson, but as things develop, other artists will no doubt
+          join the Gallery. Prices reflect the fact purchases are made directly from the artist.
+        </p>
+      </section>
+
+
+      <section class="section colored-window" id="abouttheartist">
+        <h2>The Artist</h2>
+        <p>
+          I think I was always supposed to be a painter.
+          It's not until I retired from a busy life organizing
+          major public events in Wellington that I started to
+          take painting seriously.
+        </p>
+        <p>
+          You will see two basic styles of acrylic painting in the way I work.
+          Some paintings are rendered in a tight, geometric, exact way showing
+          an understanding of objects and perspective. Others are more
+          loosely created and happen more quickly. I shall keep going at
+          both, perhaps until the louder voice drowns out the other.
+        </p>
+        <p><strong>Grant Stevenson QSM</strong></p>
+      </section>
+    </div>
+  </section>
+
+
+
+
+  <section id="gallery">
+    <div class="section" id="Gallery-Title">
+      <h1>Gallery Paintings</h1>
+      <button id="toggleGallery" class="button">Toggle</button>
+    </div>
+    <!-- Photo Grid -->
+    <div class="container Gallery">
+      <div class="row animate-fade-in">
+        <div class="column">
+          <img src="/images/Blue Bowl Final_cropped.jpg" alt="The Blue bowl" style="width:100%"
+            data-title="The Blue Bowl" data-description="1200 x 400 SOLD">
+          <img src="/images/Dungeon_cropped.jpg" alt="Dungeon" style="width:100%" data-title="The Dungeon"
+            data-description="250 x 350 SOLD">
+          <img src="/images/Tomb_cropped.jpg" alt="tomb" style="width:100%" data-title="Tomb"
+            data-description="300 x 400 SOLD">
+          <img src="/images/Eight_houses_cropped.jpg" alt="Eight Houses" style="width:100%" data-title="Eight Houses"
+            data-description="760 x 760 $850">
+          <img src="/images/Flower_focus_cropped.jpg" alt="Flower Focus" style="width:100%" data-title="Flower Focus"
+            data-description="410 x 700 $695">
+          <img src="/images/BOOKCASE_cropped.jpg" alt="The Case For Books" style="width:100%"
+            data-title="The Case for Books" data-description="800 x 400 SOLD">
+          <img src="/images/The_Key.jpg" alt="The Key" style="width:100%" data-title="The Key"
+            data-description="300 x 300 $195">
+          <img src="/images/Artefact.jpg" alt="Artefact" style="width:100%" data-title="Artefact" data-description="">
+          <img src="/images/Sole Pepper.JPG" alt="Sole Pepper" style="width:100%" data-title="Sole Pepper"
+            data-description="Sole pepper">
+          <img src="/images/Cello.JPG" alt="Cello" style="width:100%" data-title="Stained Glass Window"
+            data-description="Cello">
+          <img src="/images/IMG_0043.jpg" alt="Birch Bridge" style="width:100%" data-title="Birch Bridge"
+            data-description="">
+          <img src="/images/The Rubiks Cube.JPG" alt="The Rubiks Cube" style="width:100%"
+            data-title="Stained Glass Window" data-description="The Rubkiks Cube">
+        </div>
+
+        <div class="column">
+          <img src="/images/IMG_0010.jpg" alt="Main Window" style="width:100%" data-title="Main Window"
+            data-description="Main window">
+          <img src="/images/GoldFishandlilyflower_cropped.jpg.jpg" alt="Goldfish & Lily Flower" style="width:100%"
+            data-title="Goldfish and Lily" data-description="365 x 625 $550">
+          <img src="/images/Hillsidehouses_cropped.jpg.jpg" alt="Hillside Houses" style="width:100%"
+            data-title="Hillside Houses" data-description="760 x 1144 SOLD">
+          <img src="/images/Houses_cropped.jpg" alt="Houses" style="width:100%" data-title="Houses"
+            data-description="300 x 450 SOLD">
+          <img src="/images/Houseswithchurch_cropped.jpg.jpg" alt="Houses with Church" style="width:50%"
+            data-title="Houses with Church" data-description="460 x 600 SOLD">
+          <img src="/images/Church and Corner Store.jpg" alt="Church & Corner Store" style="width:100%"
+            data-title="Church and Corner Store" data-description="250 x 200 $195">
+          <img src="/images/Pedestrian_crossing_cropped" alt="Pedestrian Crossing" style="width:100%"
+            data-title="Pedestrian Crossing" data-description="1000 x 500 $650">
+          <img src="/images/Letterboxes_of_Manakau_cropped.jpg" alt="Letterboxes of Manakau" style="width:100%"
+            data-title="Letterboxes of Manakau" data-description="380 x 760 SOLD">
+          <img src="/images/Goldfish_cropped.jpg" alt="Goldfish" style="width:100%" data-title="Goldfish"
+            data-description="570 x 410 $550">
+          <img src="/images/House_with_Plans.jpg" alt="House with Plans" style="width:100%"
+            data-title="House with Plans" data-description="500 x 750 SOLD">
+          <img src="/images/Gabion_Wall.jpg" alt="The Stone Wall" style="width:100%" data-title="The Stone Wall"
+            data-description="900 x 1500 $980">
+          <img src="/images/Cottageatcrossroads.jpg" alt="Cottage at Crossroads" style="width:100%"
+            data-title="Cottage at the Crossroads" data-description="250 x 200 $95">
+          <img src="/images/Single shop.JPG" alt="Single Shop" style="width:100%" data-title="Single Shop"
+            data-description="">
+          <img src="/images/Apple.JPG" alt="Apple" style="width:100%" data-title="Stained Glass Window"
+            data-description="">
+          <img src="/images/Timbuktu.JPG" alt="Timbuktu" style="width:100%" data-title="Stained Glass Window"
+            data-description="">
+        </div>
+
+        <div class="column">
+          <img src="/images/Horowhenua_cropped.jpg" alt="Horowhenua" style="width:100%" data-title="Horowhenua"
+            data-description="760 x 760 $850">
+          <img src="/images/Nudescape_cropped.jpg" alt="Nudescape" style="width:100%" data-title="Nudescape"
+            data-description="300 x 1200 $500">
+          <img src="/images/Seated Nude.JPG" alt="Seated Nude" style="width:100%;" data-title="" data-description="">
+          <img src="/images/Mediterranean Goddess unframed.jpg" alt="Mediterranean Godess" style="width:100%"
+            data-title="Mediterranean Goddess" data-description="630 x 480 $450">
+          <img src="/images/Rose_cropped.jpg" alt="Rose" style="width:100%" data-title="Rose"
+            data-description="300 x 300 SOLD">
+          <img src="/images/Pastel_Rose.jpg" alt="Pastel Rose" style="width:100%" data-title="Pastel Rose"
+            data-description="250 x 160 SOLD">
+          <img src="/images/Sapphire_cropped.jpg" alt="Sapphire" style="width:100%" data-title="Sapphire"
+            data-description="610 x 610 $595">
+          <img src="/images/Schism_cropped.jpg" alt="Schism" style="width:100%" data-title="Schism"
+            data-description="610 x 610 $550">
+          <img src="/images/Her_Red_Shoes.jpg" alt="Her Red Shoes" style="width:100%" data-title="Her Red Shoes"
+            data-description="300 x 400 SOLD">
+          <img src="/images/Impressions_of_Flowers.jpg" alt="Impressions of Flowers" style="width:100%"
+            data-title="Impressions of Flowers" data-description="610 x 610 $495">
+          <img src="/images/Moody_Houses.jpg" alt="Moody Houses" style="width:100%" data-title="Sunset Houses"
+            data-description="500 x 400 $400">
+          <img src="/images/Cobaltblueglassware.jpg" alt="Cobalt Blue Glassware" style="width:100%"
+            data-title="Cobalt Blue Glassware" data-description="760 x 760 SOLD">
+          <img src="/images/Whare in The Hills.JPG" alt="Whare in The Hills" style="width:100%"
+            data-title="Whare in The Hills" data-description="">
+          <img src="/images/IMG_E1677.JPG" alt="Untitled Painting" style="width:100%" data-title="Stained Glass Window"
+            data-description="">
+          <img src="/images/Three Panel Peppers.JPG" alt="Three Panel Peppers" style="width:100%"
+            data-title="Stained Glass Window" data-description="">
+          <img src="/images/IMG_0016.jpg" alt="Untitled painting" style="width:100%" data-title="Untitled"
+            data-description="">
+          <img src="/images/The Entry.jpg" alt="The Entry" style="width:100%" data-title="The Entry"
+            data-description="">
+
+
+        </div>
+
+        <div class="column">
+          <img src="/images/Stainedglasswindow_cropped.jpg" alt="Stained Glass Window" style="width:100%"
+            data-title="Stained Glass Window" data-description="1500 x 400 SOLD">
+          <img src="/images/Small Stained Glass.JPG" alt="Small Stained Glass" style="width:100%"
+            data-title="Small Stained Glass" data-description="">
+          <img src="/images/Thehall_cropped.jpg" alt="The Hall" style="width:100%" data-title="The Hall"
+            data-description="500 x 400 SOLD">
+          <img src="/images/Villa_cropped.jpg" alt="Villa" style="width:100%" data-title="Villa"
+            data-description="400 x 550 SOLD">
+          <img src="/images/Westcoasttriptych_cropped.jpg" alt="West Coast II" style="width:100%"
+            data-title="West Coast II" data-description="500 x 1500 SOLD">
+          <img src="/images/Light_Flare.jpg" alt="Light Flare" style="width:100%" data-title="Light Flare"
+            data-description="500 x 750 $475">
+          <img src="/images/Lady_of_the_Lamp.jpg" alt="Lady of The Lamp" style="width:100%"
+            data-title="Lady of The Lamp" data-description="760 x 380 SOLD">
+          <img src="/images/Celtic_Cross.jpg" alt="Celtic Cross" style="width:100%"
+            data-title="Celtic Cross - Stained Glass" data-description="1050 x 550 $950">
+          <img src="/images/Shrine.JPG" alt="Shrine" style="width:100%" data-title="Shrine" data-description="">
+          <img src="/images/IMG_0057.jpg" alt="Luggage" style="width:100%" data-title="Luggage" data-description="">
+          <img src="/images/Dusk at the store.jpg" alt="Dusk at The Store" style="width:100%"
+            data-title="Dusk at The Store" data-description="">
+
+
+
+        </div>
       </div>
+    </div>
 
-      <div class="column">
-        <img src="/images/River Blue horizon.jpg" alt="River" style="width:100%" data-title="River: Blue Horizon"
-          data-description="1000 x 1500 $1450">
-        <img src="/images/Castle_on_a_lotch_cropped.jpg" alt="Castle on The Loch" style="width:100%" data-title="Castle on the Loch"
-          data-description="485 x 630 $800">
-        <img src="/images/Scotland two.jpg" alt="Scottish Loch II" style="width:100%" data-title="Scottish Loch II"
-          data-description="320 x 460 $680">
-      </div>
 
-      <div class="column">
-        <img src="/images/Clouds_cropped.jpg" alt="Cloud Formation" style="width:100%" data-title="Cloud Formation"
-          data-description="1000 x 500 $1250">
+    <div class="section" id="Blue-Horizon-Title">
+      <h1>Blue Horizon Series</h1>
+      <button id="togglebluehorizon" class="button">Toggle</button>
+    </div>
+    <!-- Photo Grid -->
+    <div class="container Blue-horizon">
+      <div class="row animate-fade-in">
+        <div class="column">
+          <img src="/images/Stream.jpg" alt="Stream" style="width:100%">
+        </div>
+
+        <div class="column">
+          <img src="/images/River Blue horizon.jpg" alt="River" style="width:100%" data-title="River: Blue Horizon"
+            data-description="1000 x 1500 $1450">
+          <img src="/images/Castle_on_a_lotch_cropped.jpg" alt="Castle on The Loch" style="width:100%"
+            data-title="Castle on the Loch" data-description="485 x 630 $800">
+          <img src="/images/Scotland two.jpg" alt="Scottish Loch II" style="width:100%" data-title="Scottish Loch II"
+            data-description="320 x 460 $680">
+        </div>
+
+        <div class="column">
+          <img src="/images/Clouds_cropped.jpg" alt="Cloud Formation" style="width:100%" data-title="Cloud Formation"
+            data-description="1000 x 500 $1250">
           <img src="/images/IMG_0081.jpg" alt="Untitled Painting" style="width:100%" data-title=""
-          data-description="1000 x 500 $1250">
-        <img src="/images/Scottish loch 1.jpg" alt="Scottish Loch I" style="width:100%" data-title="Scottish Loch I"
-          data-description="320 x 460 SOLD">
-      </div>
+            data-description="1000 x 500 $1250">
+          <img src="/images/Scottish loch 1.jpg" alt="Scottish Loch I" style="width:100%" data-title="Scottish Loch I"
+            data-description="320 x 460 SOLD">
+        </div>
 
-      <div class="column">
-        <img src="/images/Azure blue horizon.jpg" alt="Horizon Azure Blue" style="width:100%" data-title="Horizon Azure Blue"
-          data-description="900 x 450 $550">
-          <img src="/images/Scottish loch 3.jpg" alt="Scottish Loch III" style="width:100%" data-title="Scottish Loch III"
-          data-description="320 x 460 SOLD">
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="Dot-Series-Title">
-    <h1>Dot Series</h1>
-    <button id="toggledotseries" class="button">Toggle</button>
-  </div>
-  <!-- Photo Grid -->
-  <div class="container Dot-series">
-    <div class="row animate-fade-in">
-      <div class="column">
-        <img src="/images/Focusondots_cropped.jpg" alt="Dots Focus" style="width:100%" data-title="Dots Focus"
-          data-description="460 x 310 $495">
-      </div>
-
-      <div class="column">
-        <img src="/images/Bluegreendots_cropped.jpg" alt="Blue Green Dots"style="width:100%" data-title="Blue Green Dots"
-          data-description="310 x 460 $395">
-      </div>
-
-      <div class="column">
-        <img src="/images/Field_of_dreams.jpg" alt="Field of Dreams" style="width:100%" data-title="Field of Dreams" data-description="Field of Dreams">
-      </div>
-
-      <div class="column">
-        <img src="/images/Latestwork_cropped.jpg" alt="Dots Lanndscape" style="width:100%" data-title="Dots Landscape"
-          data-description="470 x 600 $675">
+        <div class="column">
+          <img src="/images/Azure blue horizon.jpg" alt="Horizon Azure Blue" style="width:100%"
+            data-title="Horizon Azure Blue" data-description="900 x 450 $550">
+          <img src="/images/Scottish loch 3.jpg" alt="Scottish Loch III" style="width:100%"
+            data-title="Scottish Loch III" data-description="320 x 460 SOLD">
+        </div>
       </div>
     </div>
+
+    <div class="section" id="Dot-Series-Title">
+      <h1>Dot Series</h1>
+      <button id="toggledotseries" class="button">Toggle</button>
+    </div>
+    <!-- Photo Grid -->
+    <div class="container Dot-series">
+      <div class="row animate-fade-in">
+        <div class="column">
+          <img src="/images/Focusondots_cropped.jpg" alt="Dots Focus" style="width:100%" data-title="Dots Focus"
+            data-description="460 x 310 $495">
+        </div>
+
+        <div class="column">
+          <img src="/images/Bluegreendots_cropped.jpg" alt="Blue Green Dots" style="width:100%"
+            data-title="Blue Green Dots" data-description="310 x 460 $395">
+        </div>
+
+        <div class="column">
+          <img src="/images/Field_of_dreams.jpg" alt="Field of Dreams" style="width:100%" data-title="Field of Dreams"
+            data-description="Field of Dreams">
+        </div>
+
+        <div class="column">
+          <img src="/images/Latestwork_cropped.jpg" alt="Dots Lanndscape" style="width:100%" data-title="Dots Landscape"
+            data-description="470 x 600 $675">
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <div class="header-container">
+    <div class="section" id="location-header-container">
+      <h2>Come for a visit</h2>
+      <p>Seagrass is located at 38 Moana Street in Otaki beach.</p>
+    </div>
+    <div class="section" id="Contact-header-container">
+      <h2>Get In Touch</h2>
+      <p>For a detailed message such as a commission request please fill out the form below.</p>
+    </div>
+  </div>
+  <div class="location-container" id="location">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2489963845132!2d175.11737601234128!3d-40.7345462712709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d409193f0d43cb5%3A0x2873deb15f6d1391!2sSeagrass%20Gallery%2C!5e0!3m2!1sen!2snz!4v1700896080063!5m2!1sen!2snz"
+      width="50%" height="367" style="border: none" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <section id="contact" class="colored-window">
+      <div class="section" id="contact-form">
+        <form action="https://formspree.io/f/xrgnenro" method="POST">
+          <label for="email">Your email:</label>
+          <input type="email" name="email" id="email" required>
+
+          <label for="phone">Your Phone number:</label>
+          <input type="tel" name="Mobile" id="phone" required>
+
+          <label for="message">Your message:</label>
+          <textarea name="message" id="message" required></textarea>
+
+          <button type="submit" class="button">Send Message</button>
+          <a href="tel:0272314643" class="button">Call Now</a>
+        </form>
+      </div>
+    </section>
   </div>
 
-<div class="header-container">
-<div class="section" id="location-header-container">
-  <h2>Come for a visit</h2>
-  <p>Seagrass is located at 38 Moana Street in Otaki beach.</p>
-</div>
-<div class="section" id="Contact-header-container">
-  <h2>Get In Touch</h2>
-  <p>For a detailed message such as a commission request please fill out the form below.</p>
-</div>
-</div>
-<div class="location-container" id="location">
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2489963845132!2d175.11737601234128!3d-40.7345462712709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d409193f0d43cb5%3A0x2873deb15f6d1391!2sSeagrass%20Gallery%2C!5e0!3m2!1sen!2snz!4v1700896080063!5m2!1sen!2snz"
-      width="50%" height="367"style= "border: none"  loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-      
-
-<!-- Contact Form -->
- <section class="section colored-window">
-  <div class="section" id="contact-form">
-    <form action="https://formspree.io/f/xrgnenro" method="POST">
-      <label for="email">Your email:</label>
-      <input type="email" name="email" id="email" required>
-      <label for="phone">Your Phone number:</label>
-      <input type="tel" name="Mobile" id="phone" required>
-      <label for="message">Your message:</label>
-      <textarea name="message" id="message" required></textarea>
-      <button type="submit" class="button">Send Message</button>
-      <a href="tel:0272314643" class="button" id="phone">Call Now</a>
-    </form>
-  </div>
-</div>
-</section>
 
   <!-- Footer Section -->
   <footer role="contentinfo">
@@ -350,10 +365,10 @@
       <div class="footer-nav">
         <nav class="footer">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-section-header">About</a></li>
-            <li><a href="#Gallery-Title">Gallery</a></li>
-            <li><a href="#contact-form">Contact</a></li>
+            <li><a href="/home" onclick="route(event)">Home</a></li>
+            <li><a href="/about" onclick="route(event)">About</a></li>
+            <li><a href="/gallery" onclick="route(event)">Gallery</a></li>
+            <a href="/contact" onclick="route(event)">Contact</a>
           </ul>
         </nav>
       </div>
@@ -361,228 +376,69 @@
       <div class="links">
         <p>&copy; 2026 Seagrassgallery. All rights reserved.</p>
         <div class="links-container">
-        <a href="Terms.html">Terms of use</a>
-        <a href="Privacy.html">Privacy policy</a>
-      </div>
+          <a href="Terms.html">Terms of use</a>
+          <a href="Privacy.html">Privacy policy</a>
+        </div>
       </div>
     </div>
   </footer>
-  
 
-   <!-- Image Popup -->
-<div id="popup">
-  <div id="close-btn">✖ CLOSE</div>
-  <div id="prev-btn" class="arrow-btn" aria-label="Previous Image">
-    <i class="fas fa-chevron-left"></i>
+
+  <!-- Image Popup -->
+  <div id="popup">
+    <div id="close-btn">✖ CLOSE</div>
+    <div id="prev-btn" class="arrow-btn" aria-label="Previous Image">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <img id="popup-image" src="" alt="Popup Image">
+    <div id="img-title">Popup Title</div>
+    <div id="next-btn" class="arrow-btn" aria-label="Next Image">
+      <i class="fas fa-chevron-right"></i>
+    </div>
   </div>
-  <img id="popup-image" src="" alt="Popup Image">
-  <div id="img-title">Popup Title</div>
-  <div id="next-btn" class="arrow-btn" aria-label="Next Image">
-    <i class="fas fa-chevron-right"></i>
-  </div>
-</div>
-
-
-
   <script src="https://kit.fontawesome.com/b11d8f09e2.js" crossorigin="anonymous"></script>
+</body>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
-  <script>
-    // JavaScript for toggle functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      // Gallery toggle
-      const gallery = document.querySelector('.Gallery');
-      const toggleGalleryButton = document.getElementById('toggleGallery');
-
-      if (toggleGalleryButton) {
-        toggleGalleryButton.addEventListener('click', function () {
-          toggleSectionVisibility(gallery, toggleGalleryButton);
-        });
-      }
-
-      // Blue Horizon series toggle
-      const blueHorizon = document.querySelector('.Blue-horizon');
-      const toggleBlueHorizonButton = document.getElementById('togglebluehorizon');
-
-      if (toggleBlueHorizonButton) {
-        toggleBlueHorizonButton.addEventListener('click', function () {
-          toggleSectionVisibility(blueHorizon, toggleBlueHorizonButton);
-        });
-      }
-
-      // Dot Series toggle
-      const dotSeries = document.querySelector('.Dot-series');
-      const toggleDotSeriesButton = document.getElementById('toggledotseries');
-
-      if (toggleDotSeriesButton) {
-        toggleDotSeriesButton.addEventListener('click', function () {
-          toggleSectionVisibility(dotSeries, toggleDotSeriesButton);
-        });
-      }
-
-      // Function to toggle section visibility
-      function toggleSectionVisibility(section, button) {
-        if (section.style.display === 'none' || section.style.display === '') {
-          section.style.display = 'flex';
-          button.textContent = 'Hide';
-        } else {
-          section.style.display = 'none';
-          button.textContent = 'Show';
-        }
-      }
-
-      // Titles for each painting (this could be from your backend or statically set here)
-      const paintingTitles = [
-        "Blue Bowl Final",
-        "Dungeon",
-        "Tomb",
-        "Eight houses",
-        "Flower focus",
-        "Bookcase",
-        "The Key",
-        "Artefact",
-        "Sole Pepper",
-        "Cello",
-        "Birch Bridge",
-        "The Rubiks Cube",
-        "Main Window",
-        "Gold Fish and lily flower",
-        "Hillside Houses",
-        "Houses",
-        "Houses with church",
-        "Church and Corner Store",
-        "Pedestrian crossing",
-        "Letterboxes of Manakau",
-        "Goldfish",
-        "House with Plans",
-        "Gabion Wall",
-        "Cottage at crossroads",
-        "Single shop",
-        "Apple",
-        "Timbuktu",
-        "Horowhenua",
-        "Nudescape",
-        "Seated Nude",
-        "Mediterranean Goddess",
-        "Rose",
-        "Pastel Rose",
-        "Sapphire",
-        "Schism",
-        "Her Red Shoes",
-        "Impressions of Flowers",
-        "Moody Houses",
-        "Cobalt blue glassware",
-        "Whare in The Hills",
-        "Untitled",
-        "Three Panel Peppers",
-        "Untitled",
-        "The Entry",
-        "Stained glass window",
-        "Small Stained Glass",
-        "The hall",
-        "Villa",
-        "West Coast",
-        "West coast triptych",
-        "Light Flare",
-        "Lady of the Lamp",
-        "Celtic Cross",
-        "Shrine",
-        "Luggage",
-        "Dusk at the Store",
-        "Stream",
-        "River Blue horizon",
-        "Castle on a loch",
-        "Scotland two",
-        "Clouds",
-        "Untitled",
-        "Scottish loch 1",
-        "Azure blue horizon",
-        "Scottish loch 3",
-        "Focus on dots",
-        "Blue green dots",
-        "Field of dreams",
-        "Dots Landscape"
-      ];
-
-      // Function to toggle the image popup
-      function togglePopup() {
-        const popup = document.getElementById('popup');
-        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'flex' : 'none';
-      }
-
-      // Function to add popup functionality to images
-      function addPopupFunctionality(imageSelector) {
-        const images = document.querySelectorAll(imageSelector);
-        const popupImage = document.getElementById('popup-image');
-        const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
-        images.forEach(function (image, index) {
-          image.addEventListener('click', function () {
-            togglePopup();
-            popupImage.src = this.src;
-            popupImage.dataset.index = index;
-            popupImage.dataset.selector = imageSelector;
-            imgTitle.textContent = paintingTitles[index]; // Set the corresponding title
-          });
-        });
-      }
-
-      // Add popup functionality to images
-      addPopupFunctionality('.column img');
-
-      // Function to navigate to the next image in the popup
-      function nextImage() {
-        const popupImage = document.getElementById('popup-image');
-        let currentImageIndex = parseInt(popupImage.dataset.index);
-        const images = document.querySelectorAll(popupImage.dataset.selector);
-        const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-
-        popupImage.src = images[currentImageIndex].src;
-        popupImage.dataset.index = currentImageIndex;
-        imgTitle.textContent = paintingTitles[currentImageIndex]; // Update title
-      }
-
-      // Function to navigate to the previous image in the popup
-      function prevImage() {
-        const popupImage = document.getElementById('popup-image');
-        let currentImageIndex = parseInt(popupImage.dataset.index);
-        const images = document.querySelectorAll(popupImage.dataset.selector);
-        const imgTitle = document.getElementById('img-title'); // Reference to the title element
-
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-
-        popupImage.src = images[currentImageIndex].src;
-        popupImage.dataset.index = currentImageIndex;
-        imgTitle.textContent = paintingTitles[currentImageIndex]; // Update title
-      }
-
-      // Add event listeners for arrow clicks
-      document.getElementById('prev-btn').addEventListener('click', prevImage);
-      document.getElementById('next-btn').addEventListener('click', nextImage);
-      document.getElementById('close-btn').addEventListener('click', togglePopup);
-    });
-  </script>
-
-  <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  const openIcon = hamburger.querySelector('.open');
-  const closeIcon = hamburger.querySelector('.close');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-
-    // Toggle icons
-    if (navLinks.classList.contains('show')) {
-      openIcon.style.display = 'none';
-      closeIcon.style.display = 'inline';
-    } else {
-      openIcon.style.display = 'inline';
-      closeIcon.style.display = 'none';
-    }
+  // Configure GA with cookie_domain set to 'auto' or specify your domain if needed
+  gtag('config', 'G-K75NG7PPSE', {
+    'cookie_domain': 'auto'
   });
 </script>
-</body>
+<script>
+  function route(e) {
+    e.preventDefault();
+    const path = e.target.getAttribute("href");
+    history.pushState({}, "", path);
+    handleRoute();
+  }
+
+  function handleRoute() {
+    const path = window.location.pathname.replace("/", "");
+
+    if (!path || path === "home") {
+      scrollTo("home");
+    } else if (path === "about") {
+      scrollTo("about");
+    } else if (path === "gallery") {
+      scrollTo("gallery");
+    } else if (path === "contact") {
+      scrollTo("contact");
+    }
+  }
+
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  window.addEventListener("popstate", handleRoute);
+  handleRoute();
+</script>
 
 </html>
