@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
         "Small Stained Glass",
         "The hall",
         "Villa",
-        "West Coast",
         "West coast triptych",
         "Light Flare",
         "Lady of the Lamp",
@@ -205,3 +204,4 @@ hamburger.addEventListener('click', () => {
         'cookie_domain': 'auto'
     });
 });
+
